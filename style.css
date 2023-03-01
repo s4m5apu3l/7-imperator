@@ -1,0 +1,235 @@
+@font-face {
+  font-family: "Ruberoid-c";
+  src: url(/assets/fonts/Ruberoid-Bold.woff2) format("woff2"),
+    url(/assets/fonts/Ruberoid-Bold.woff) format("woff"),
+    url(/assets/fonts/Ruberoid-Bold.ttf) format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Ruberoid-c";
+  src: url(/assets/fonts/Ruberoid-Regular.woff2) format("woff2"),
+    url(/assets/fonts/Ruberoid-Regular.woff) format("woff"),
+    url(/assets/fonts/Ruberoid-Regular.ttf) format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ruberoid-c";
+  src: url(/assets/fonts/Ruberoid-Light.woff2) format("woff2"),
+    url(/assets/fonts/Ruberoid-Light.woff) format("woff"),
+    url(/assets/fonts/Ruberoid-Light.ttf) format("opentype");
+  font-weight: 300;
+}
+
+@import url(./assets/css/normalize.css);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Ruberoid-c", sans-serif;
+  min-width: 320px;
+  height: auto;
+}
+
+.l-wrapper {
+  max-width: 1536px;
+  padding: 0 149px;
+  margin: 0 auto;
+}
+/* components start */
+.c-clip-path {
+  clip-path: polygon(0 1%, 100% 0%, 97% 100%, 0% 100%);
+}
+
+.c-title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #343434;
+}
+.c-gradient-text {
+  background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* components end */
+
+/* l-hero-section start */
+
+.l-hero__section {
+  height: 914px;
+  background-image: url("./assets/img/back.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  padding-top: 85px;
+  position: relative;
+}
+
+.l-hero__section::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url(./assets/img/line-yellow.svg);
+  height: 169px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+}
+
+.l-hero__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.l-hero__right .c-logo {
+  padding-left: 29px;
+}
+
+.l-hero__title {
+  margin-bottom: 23px;
+}
+
+.l-hero__title h1 {
+  /* padding: 0 29px; */
+  position: relative;
+  padding: 0 29px;
+  white-space: pre-line;
+}
+.l-hero__title h1 span {
+  position: absolute;
+  left: 0;
+  padding: 0 29px;
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
+  width: 104%;
+}
+
+.l-sun-bg {
+  background-image: url(./assets/img/sun.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.l-hero__button a {
+  display: block;
+  padding: 22px 75px 22px 75px;
+  background: #343434;
+  border-radius: 60.5px;
+  max-width: 380px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  /* or 21px */
+
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 29px;
+  position: relative;
+  overflow: hidden;
+}
+/* animate ripple */
+.animate-ripple {
+  webkit-animation: ripple 4s linear infinite;
+  -moz-animation: ripple 4s linear infinite;
+  -ms-animation: ripple 4s linear infinite;
+  -o-animation: ripple 4s linear infinite;
+  animation: ripple 4s linear infinite;
+}
+@keyframes ripple {
+  20% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+.anim-btn {
+  height: 200px;
+  width: 290px;
+  top: -20px;
+  left: -140px;
+  animation: ripple 4s linear infinite;
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  z-index: 20;
+}
+
+.l-hero__list {
+  margin-top: 50px;
+  margin-left: 29px;
+}
+
+.l-hero__list ul {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  gap: 21px 32px;
+}
+.l-hero__list li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #343434;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.l-hero__list li span {
+  font-weight: 700;
+  z-index: 3;
+}
+.l-hero__list li::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  height: 40px;
+  width: 10px;
+  background-color: #ffd600;
+  top: -2px;
+  z-index: -1;
+}
+
+.l-hero--img {
+  position: relative;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.l-hero--img img {
+  position: relative;
+  z-index: 2;
+}
+
+.l-sun-bg {
+  background-image: url(./assets/img/sun.svg);
+  width: 640px;
+  height: 640px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* l-hero-section end */
