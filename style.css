@@ -22,6 +22,10 @@
 
 @import url(./assets/css/normalize.css);
 
+.c-pbottom-100 {
+  padding-bottom: 1000px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,6 +38,8 @@ body {
   font-family: "Ruberoid-c", sans-serif;
   min-width: 320px;
   height: auto;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 .l-wrapper {
@@ -59,6 +65,14 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.c-bg-gradient {
+  background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
+}
+
+.l-section {
+  position: relative;
 }
 
 /* components end */
@@ -99,6 +113,7 @@ body {
 
 .l-hero__title {
   margin-bottom: 23px;
+  will-change: transform;
 }
 
 .l-hero__title h1 {
@@ -113,7 +128,7 @@ body {
   padding: 0 29px;
   display: inline-block;
   white-space: nowrap;
-  background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
+  
   width: 104%;
 }
 
@@ -232,4 +247,20 @@ body {
   z-index: 1;
 }
 
-/* l-hero-section end */
+/* l-hero-section end ======================*/
+
+/*==== l-profit-section start ======================*/
+
+.l-profit__section {
+  margin-top: -110px;
+  padding-bottom: 100px;
+  padding-top: 183px;
+  background-image: url(./assets/img/bg-profit.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 910px;
+
+}
+
+
+/* l-profit-section end ======================*/
