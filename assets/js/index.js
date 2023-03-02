@@ -23,4 +23,16 @@
 //   });
 // }
 
+// $(".js-modal-btn").modalVideo();
+new ModalVideo('.js-modal-btn');
 
+var swiper = new Swiper(".l-kids__swiper", {
+  slidesPerView: 'auto',
+  // spaceBetween: ,
+  // loop: true,
+  speed: 400,
+  grabCursor: true,
+  freeMode: true,
+  lazyLoading: true,
+  // cssMode: true,
+});

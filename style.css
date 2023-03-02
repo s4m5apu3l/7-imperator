@@ -135,7 +135,7 @@ body {
   height: 100%;
   width: 29px;
   top: 0;
-  background-color: #ffd600;
+  background-color: #ffad00;
 }
 
 .bg-white {
@@ -160,6 +160,21 @@ body {
   width: 29px;
   top: 0;
   background-color: #ffffff;
+}
+
+.c-text-30--bold {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #343434;
+}
+
+.c-text-16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #343434;
 }
 
 /* components end */
@@ -478,7 +493,7 @@ body {
 .l-train {
   display: grid;
   grid-template-columns: 300px 1fr;
-  gap: 60px;
+  gap: 100px;
   padding: 123px 0 184px 0;
 }
 .l-train__list {
@@ -573,3 +588,124 @@ body {
 }
 
 /* l-whatis section end */
+
+/* l-history section start */
+
+.l-history__section {
+  padding: 160px 0 80px 0;
+}
+
+.l-history {
+  display: grid;
+  grid-template-columns: 1fr 225px;
+  gap: 20px;
+}
+.l-history__title {
+  max-height: 550px;
+  position: sticky;
+  top: 30px;
+}
+.l-history__map {
+  margin-top: 40px;
+}
+
+.l-history__timeline li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.l-history__timeline li:last-child {
+  padding-bottom: unset;
+}
+.l-history__timeline li:last-child::after {
+  display: none;
+}
+
+.l-history__timeline li::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 8px;
+  width: 22px;
+  height: 22px;
+  background: #ffe455;
+  border: 3px solid #ffad00;
+  border-radius: 50%;
+  z-index: 10;
+}
+.l-history__timeline li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: -27px;
+  width: 3px;
+  top: 20px;
+  z-index: 1;
+  background-color: #ffd600;
+}
+
+/* l-history section end */
+
+/* l-kids section start */
+
+.l-kids__section {
+  padding: 80px 0;
+}
+.l-kids__section .c-title {
+  text-align: center;
+}
+
+.l-kids__content {
+  background-color: #ffd600;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.js-swiper__content .swiper-slide {
+  clip-path: polygon(8% 0, 100% 0%, 93% 100%, 0% 100%);
+  overflow: hidden;
+  max-width: 344px;
+  height: 450px;
+  margin-right: -19px;
+}
+.js-swiper__content .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.l-kids__text {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+.l-kids__text span {
+  font-weight: 700;
+}
+
+.l-kids__video {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.l-kids__video button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: transparent;
+  border: unset;
+  cursor: pointer;
+}
+.l-kids__video span {
+  font-weight: 700;
+  font-family: "Ruberoid-c", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #343434;
+  text-align: start;
+}
+/* l-kids section end  */
