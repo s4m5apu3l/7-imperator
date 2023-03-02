@@ -21,3 +21,11 @@ i.kids {
   height: 60px;
   display: block;
 }
+
+i.rect {
+  background:url("data:image/svg+xml,%3Csvg width='157' height='157' viewBox='0 0 157 157' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M157 0H112.2L101 11.2V56H145.8L157 44.8V0Z' fill='%23FFD600'/%3E%3Cpath d='M56 101H11.2L0 112.2V157H44.8L56 145.8V101Z' fill='%23FFAD00'/%3E%3Cpath d='M150 7H35.6L6.99997 35.6V150H121.4L150 121.4V7Z' fill='url(%23paint0_linear_219_3)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_219_3' x1='1.02582' y1='7.00032' x2='155.125' y2='8.24203' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFD600'/%3E%3Cstop offset='1' stop-color='%23FFAD00'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+   no-repeat center/contain;
+  width: 157px;
+  height: 157px;
+  display: block;
+}
