@@ -12,15 +12,15 @@
 // }
 
 // gsap scroll
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-if (ScrollTrigger.isTouch !== 1) {
-  ScrollSmoother.create({
-    wrapper: ".smooth-wrapper",
-    content: ".smooth-content",
-    smooth: 1.5,
-    effects: true,
-  });
-}
+// if (ScrollTrigger.isTouch !== 1) {
+//   ScrollSmoother.create({
+//     wrapper: ".smooth-wrapper",
+//     content: ".smooth-content",
+//     smooth: 1.5,
+//     effects: true,
+//   });
+// }
 
 
