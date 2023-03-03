@@ -651,6 +651,7 @@ body {
 
 .l-kids__section {
   padding: 160px 0 80px 0;
+  /* background: white; */
 }
 .l-kids__section .c-title {
   text-align: center;
@@ -1349,6 +1350,7 @@ body {
 
 .l-footer__section {
   position: relative;
+  overflow: hidden;
 }
 .l-footer__bg {
   background: url(./assets/img/footer-bg.png) no-repeat;

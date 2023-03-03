@@ -2,25 +2,27 @@
 const parallax = document.querySelector(".l-hero--img img");
 const container = document.querySelector(".l-hero__left");
 
-if (!("ontouchstart" in document.documentElement)) {
+// if (!("ontouchstart" in document.documentElement)) {
+// may be work when scrollSmooth undefiend
+// }
+
+// gsap scroll
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+if (ScrollTrigger.isTouch !== 1) {
   container.addEventListener("mousemove", function (event) {
     const x = event.clientX / container.offsetWidth;
     const y = event.clientY / container.offsetHeight;
 
     parallax.style.transform = `translate(-${x * 10}px, -${y * 10}px)`;
   });
-}
 
-// gsap scroll
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-if (ScrollTrigger.isTouch !== 1) {
   let smoother = ScrollSmoother.create({
     wrapper: ".smooth-wrapper",
     content: ".smooth-content",
     smooth: 2,
     effects: true,
-    smoothTouch: 0.2,
+    smoothTouch: 0.1,
   });
 
   gsap.fromTo(
@@ -33,7 +35,7 @@ if (ScrollTrigger.isTouch !== 1) {
       scrollTrigger: {
         trigger: ".l-whatis__content-left",
         start: "bottom bottom",
-        markers: true,
+
         // scrub: true
       },
     }
@@ -48,13 +50,43 @@ if (ScrollTrigger.isTouch !== 1) {
       scrollTrigger: {
         trigger: ".l-whatis__content-left",
         start: "bottom bottom",
-        markers: true,
+
         // scrub: true
       },
     }
   );
   smoother.effects(".l-whatis__content-left", { speed: 0.9, lag: 0.4 });
   smoother.effects(".l-whatis__content-right", { speed: 0.9, lag: 0.4 });
+
+  gsap.fromTo(
+    ".l-history__title",
+    {},
+    {
+      scrollTrigger: {
+        trigger: ".l-history__title",
+        pin: true,
+      },
+    }
+  );
+
+  let itemsHistory = gsap.utils.toArray(".l-history__timeline li");
+
+  itemsHistory.forEach((item) => {
+    gsap.fromTo(
+      item,
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: "-750",
+          end: "top",
+          scrub: true
+        },
+      }
+    );
+  });
 }
 
 // $(".js-modal-btn").modalVideo();
