@@ -24,10 +24,10 @@
 // }
 
 // $(".js-modal-btn").modalVideo();
-new ModalVideo('.js-modal-btn');
+new ModalVideo(".js-modal-btn");
 
 var swiperKids = new Swiper(".l-kids__swiper", {
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   // spaceBetween: ,
   // loop: true,
   speed: 400,
@@ -38,7 +38,7 @@ var swiperKids = new Swiper(".l-kids__swiper", {
 });
 
 var swiperGallery = new Swiper(".l-gallery__swiper", {
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   // spaceBetween: ,
   // loop: true,
   speed: 400,
@@ -48,3 +48,46 @@ var swiperGallery = new Swiper(".l-gallery__swiper", {
   // cssMode: true,
 });
 
+// calc range slider
+const rangePrice = document.querySelector("#price");
+const rangeDays = document.querySelector("#days");
+const rangePriceValue = document.querySelector("#price-value");
+const rangeDaysValue = document.querySelector("#days-value");
+
+const result = document.querySelector("#result-calc");
+
+function sliderPrice() {
+  let rangeMax = 7000;
+  let rangeMin = 3200;
+  valPercent = Math.round(
+    ((rangePrice.value - rangeMin) / (rangeMax - rangeMin)) * 100
+  );
+
+  rangePrice.style.background = `linear-gradient(to right, #343434 ${valPercent}% , #FFAD00 ${valPercent}%)`;
+  rangePriceValue.textContent = rangePrice.value;
+  resultCalc = rangePrice.value * rangeDays.value;
+  const formatResult = resultCalc.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+  result.textContent = `${formatResult} руб`;
+  
+  let bulletPosition = ((rangePrice.value - 3300) / (rangeMax - rangeMin));
+  rangePriceValue.style.left = bulletPosition * 379 + "px"; 
+}
+
+function sliderDays() {
+  let rangeMax = 220;
+  let rangeMin = 60;
+  valPercent = Math.round(
+    ((rangeDays.value - rangeMin) / (rangeMax - rangeMin)) * 100
+  );
+
+  rangeDays.style.background = `linear-gradient(to right, #343434 ${valPercent}% , #FFAD00 ${valPercent}%)`;
+  rangeDaysValue.textContent = rangeDays.value;
+  resultCalc = rangePrice.value * rangeDays.value;
+  const formatResult = resultCalc.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+  result.textContent = `${formatResult} руб`;
+
+  let bulletPosition = ((rangeDays.value - 60) / (rangeMax - rangeMin));
+  rangeDaysValue.style.left = bulletPosition * 379 + "px"; 
+}
+sliderDays();
+sliderPrice();

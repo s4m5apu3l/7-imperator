@@ -20,6 +20,10 @@
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="./assets/js/modal-video.min.js"></script>
   <script src="./assets/js/index.js" defer></script>
+
+  <script>!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "1090682", hash: "2cbbd3d93631aa8bb739b190d32c6091", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");</script>
+  <script id="amoforms_script_1090682" async="async" charset="utf-8"
+    src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1677663280"></script>
 </head>
 
 <body>
@@ -580,6 +584,8 @@
                 <span class="bg-yellow c-bg-gradient">
                   ЧТО ДАЕТ франшиза
                 </span>
+                <br>
+
                 седьмой император?
               </h3>
               <!-- /.c-title -->
@@ -594,10 +600,92 @@
                   <br>
                   нашей компании
                 </div>
+                <!-- /.l-text__border-top -->
+                <div class="l-calc__list">
+                  <ul>
+                    <li>
+                      <i class="calc-1"></i>
+                      <span>Методика тренировок,
+                        бизнес - продукт</span>
+                    </li>
+                    <li>
+                      <i class="calc-2"></i>
+                      <span>Бизнес – поддержка</span>
+                    </li>
+                    <li>
+                      <i class="calc-3"></i>
+                      <span>Брендированный
+                        мерч для занятий</span>
+                    </li>
+                    <li>
+                      <i class="calc-4"></i>
+                      <span>Обучение менеджеров,
+                        тренерского состава</span>
+                    </li>
+                    <li>
+                      <i class="calc-5"></i>
+                      <span>Комната данных </span>
+                    </li>
+                    <li>
+                      <i class="calc-6"></i>
+                      <span>Спортивно
+                        - нормативная лига</span>
+                    </li>
+                    <li>
+                      <i class="calc-7"></i>
+                      <span>Маркетинг</span>
+                    </li>
+                    <li>
+                      <i class="calc-8"></i>
+                      <span>IT технологии</span>
+                    </li>
+                    <li>
+                      <i class="calc-9"></i>
+                      <span>Спортивные
+                        мероприятия</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
+              <!-- /.l-calc__content-left -->
               <div class="l-calc__content-right">
+                <div class="l-calc__text-bold">
+                  <span>Выбери стоимость абонемента за месяц
+                    и количество детей, которые ты планируешь
+                    у себя в школе, и мы отправим тебе прогнозируемую выручку и чистую прибыль</span>
+                </div>
+                <div class="l-calc__calc">
+                  <form action="">
+                    <ul class="l-calc__top-list">
+                      <li>
+                        <span class="l-calc__item-text">Стоимость абонемента на 8 занятий</span>
+                        <div class="l-range__input">
+                          <span id="price-value" class="bullet-number">3200</span>
+                          <input id="price" class="l-range__line" type="range" value="3200" min="3200" max="7000" oninput="sliderPrice()">
+                        </div>
+                      </li>
+                      <li>
+                        <span class="l-calc__item-text">Количество детей в школе</span>
+                        <div class="l-range__input">
+                          <span id="days-value" class="bullet-number">60</span>
+                          <input id="days" class="l-range__line" type="range" value="60" min="60" max="220" oninput="sliderDays()">
+                        </div>
+                      </li>
+                      <li>
+                        <div class="l-summ">
+                          <span>Ваша выручка: </span>
+                          <span class="l-sum__item" id="result-calc">300 000 руб</span>
+                        </div>
+                      </li>
+                    </ul>
 
+                    <div class="l-calc__item-text">Оставьте заявку, чтобы
+                      выяснить точную выручку и чистую прибыль</div>
+                    <button class="l-calc__button">Оставьте заявку</button>
+                  </form>
+                </div>
               </div>
+              <!-- ./l-calc__content-right -->
             </div>
             <!-- /.l-calc__content -->
           </div>
@@ -606,6 +694,7 @@
         <!-- /.l-wrapper -->
       </section>
       <!-- /.l-section l-calc__section -->
+      <div class="c-pbottom-100"></div>
     </main>
   </div>
 
