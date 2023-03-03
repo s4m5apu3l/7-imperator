@@ -1,27 +1,61 @@
 // on hero section mouse parallax
-// const parallax = document.querySelector(".l-hero--img img");
-// const container = document.querySelector(".l-hero__left");
+const parallax = document.querySelector(".l-hero--img img");
+const container = document.querySelector(".l-hero__left");
 
-// if (!("ontouchstart" in document.documentElement)) {
-//   container.addEventListener("mousemove", function (event) {
-//     const x = event.clientX / container.offsetWidth;
-//     const y = event.clientY / container.offsetHeight;
+if (!("ontouchstart" in document.documentElement)) {
+  container.addEventListener("mousemove", function (event) {
+    const x = event.clientX / container.offsetWidth;
+    const y = event.clientY / container.offsetHeight;
 
-//     parallax.style.transform = `translate(-${x * 10}px, -${y * 10}px)`;
-//   });
-// }
+    parallax.style.transform = `translate(-${x * 10}px, -${y * 10}px)`;
+  });
+}
 
 // gsap scroll
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// if (ScrollTrigger.isTouch !== 1) {
-//   ScrollSmoother.create({
-//     wrapper: ".smooth-wrapper",
-//     content: ".smooth-content",
-//     smooth: 1.5,
-//     effects: true,
-//   });
-// }
+if (ScrollTrigger.isTouch !== 1) {
+  let smoother = ScrollSmoother.create({
+    wrapper: ".smooth-wrapper",
+    content: ".smooth-content",
+    smooth: 2,
+    effects: true,
+    smoothTouch: 0.2,
+  });
+
+  gsap.fromTo(
+    ".l-whatis__content-left",
+    { x: -400, opacity: 0 },
+    {
+      opacity: 1,
+      x: 0,
+      speed: 0.4,
+      scrollTrigger: {
+        trigger: ".l-whatis__content-left",
+        start: "bottom bottom",
+        markers: true,
+        // scrub: true
+      },
+    }
+  );
+  gsap.fromTo(
+    ".l-whatis__content-right",
+    { x: 400, opacity: 0 },
+    {
+      opacity: 1,
+      x: 0,
+      speed: 0.4,
+      scrollTrigger: {
+        trigger: ".l-whatis__content-left",
+        start: "bottom bottom",
+        markers: true,
+        // scrub: true
+      },
+    }
+  );
+  smoother.effects(".l-whatis__content-left", { speed: 0.9, lag: 0.4 });
+  smoother.effects(".l-whatis__content-right", { speed: 0.9, lag: 0.4 });
+}
 
 // $(".js-modal-btn").modalVideo();
 new ModalVideo(".js-modal-btn");
@@ -56,17 +90,16 @@ var swiperGallery = new Swiper(".l-phone__swiper", {
   grabCursor: true,
   // freeMode: true,
   lazyLoading: true,
-  effect: 'fade',
+  effect: "fade",
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
+    el: ".swiper-pagination",
+    type: "bullets",
   },
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
   },
 });
-
 
 // calc range slider
 const rangePrice = document.querySelector("#price");
@@ -86,11 +119,13 @@ function sliderPrice() {
   rangePrice.style.background = `linear-gradient(to right, #343434 ${valPercent}% , #FFAD00 ${valPercent}%)`;
   rangePriceValue.textContent = rangePrice.value;
   resultCalc = rangePrice.value * rangeDays.value;
-  const formatResult = resultCalc.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+  const formatResult = resultCalc
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   result.textContent = `${formatResult} руб`;
-  
-  let bulletPosition = ((rangePrice.value - 3300) / (rangeMax - rangeMin));
-  rangePriceValue.style.left = bulletPosition * 379 + "px"; 
+
+  let bulletPosition = (rangePrice.value - 3300) / (rangeMax - rangeMin);
+  rangePriceValue.style.left = bulletPosition * 379 + "px";
 }
 
 function sliderDays() {
@@ -103,11 +138,13 @@ function sliderDays() {
   rangeDays.style.background = `linear-gradient(to right, #343434 ${valPercent}% , #FFAD00 ${valPercent}%)`;
   rangeDaysValue.textContent = rangeDays.value;
   resultCalc = rangePrice.value * rangeDays.value;
-  const formatResult = resultCalc.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+  const formatResult = resultCalc
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   result.textContent = `${formatResult} руб`;
 
-  let bulletPosition = ((rangeDays.value - 60) / (rangeMax - rangeMin));
-  rangeDaysValue.style.left = bulletPosition * 379 + "px"; 
+  let bulletPosition = (rangeDays.value - 60) / (rangeMax - rangeMin);
+  rangeDaysValue.style.left = bulletPosition * 379 + "px";
 }
 sliderDays();
 sliderPrice();
