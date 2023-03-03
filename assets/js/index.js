@@ -48,6 +48,26 @@ var swiperGallery = new Swiper(".l-gallery__swiper", {
   // cssMode: true,
 });
 
+var swiperGallery = new Swiper(".l-phone__swiper", {
+  slidesPerView: 1,
+  // spaceBetween: ,
+  // loop: true,
+  speed: 1200,
+  grabCursor: true,
+  // freeMode: true,
+  lazyLoading: true,
+  effect: 'fade',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+});
+
+
 // calc range slider
 const rangePrice = document.querySelector("#price");
 const rangeDays = document.querySelector("#days");
