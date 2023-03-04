@@ -20,7 +20,7 @@ if (ScrollTrigger.isTouch !== 1) {
   let smoother = ScrollSmoother.create({
     wrapper: ".smooth-wrapper",
     content: ".smooth-content",
-    smooth: 2,
+    smooth: .8,
     effects: true,
     smoothTouch: 0.1,
   });
@@ -34,12 +34,14 @@ if (ScrollTrigger.isTouch !== 1) {
       speed: 0.4,
       scrollTrigger: {
         trigger: ".l-whatis__content-left",
-        start: "bottom bottom",
+        // start: "bottom bottom",
 
         // scrub: true
       },
     }
   );
+
+
   gsap.fromTo(
     ".l-whatis__content-right",
     { x: 400, opacity: 0 },
@@ -49,14 +51,29 @@ if (ScrollTrigger.isTouch !== 1) {
       speed: 0.4,
       scrollTrigger: {
         trigger: ".l-whatis__content-left",
-        start: "bottom bottom",
+        // start: "bottom bottom",
 
         // scrub: true
       },
     }
   );
-  smoother.effects(".l-whatis__content-left", { speed: 0.9, lag: 0.4 });
-  smoother.effects(".l-whatis__content-right", { speed: 0.9, lag: 0.4 });
+  // smoother.effects(".l-whatis__content-left", { speed: 0.9, lag: 0.4 });
+  // smoother.effects(".l-whatis__content-right", { speed: 0.9, lag: 0.4 });
+
+
+  gsap.fromTo(
+    ".l-profit__list-item",
+    { opacity: 0, x: -200 },
+    { opacity: 1, x: 0,
+      duration: 1,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".l-profit__list-item",
+      },
+     }
+  );
+
+
 
   gsap.fromTo(
     ".l-history__title",
@@ -74,7 +91,7 @@ if (ScrollTrigger.isTouch !== 1) {
   itemsHistory.forEach((item) => {
     gsap.fromTo(
       item,
-      { opacity: 0, x: 50 },
+      { opacity: 0, x: 100 },
       {
         opacity: 1,
         x: 0,
@@ -82,11 +99,74 @@ if (ScrollTrigger.isTouch !== 1) {
           trigger: item,
           start: "-750",
           end: "top",
-          scrub: true
+          scrub: true,
         },
       }
     );
   });
+
+  let fadeUp = gsap.utils.toArray(".fadeUp");
+
+  fadeUp.forEach((item) => {
+    gsap.fromTo(
+      item,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: .4,
+        scrollTrigger: {
+          trigger: item,
+          start: "-660",
+          markers: true
+          // end: "top",/
+          // scrub: true,
+        },
+      }
+    );
+  });
+
+  let fadeRight = gsap.utils.toArray(".fadeRight");
+
+  fadeRight.forEach((item) => {
+    gsap.fromTo(
+      item,
+      { opacity: 0, x: 200 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: .4,
+        scrollTrigger: {
+          trigger: item,
+          start: "-500",
+          // end: "top",/
+          // scrub: true,
+        },
+      }
+    );
+  });
+
+  let fadeLeft = gsap.utils.toArray(".fadeLeft");
+
+  fadeLeft.forEach((item) => {
+    gsap.fromTo(
+      item,
+      { opacity: 0, x: -200 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: .4,
+        scrollTrigger: {
+          trigger: item,
+          start: "-500",
+          
+          // end: "top",/
+          // scrub: true,
+        },
+      }
+    );
+  });
+  
 }
 
 // $(".js-modal-btn").modalVideo();
@@ -180,3 +260,24 @@ function sliderDays() {
 }
 sliderDays();
 sliderPrice();
+
+let btns = document.querySelectorAll('.ripple-btn');
+btns.forEach((btn) => {
+    btn.addEventListener('click', createRipple);
+})
+
+function createRipple(e) {
+    let btn = e.target;
+    let boundingBox = btn.getBoundingClientRect();
+    let x = e.clientX - boundingBox.left;
+    let y = e.clientY - boundingBox.top;
+
+    let ripple = document.createElement('span');
+    ripple.classList.add('ripple-span');
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+
+    btn.appendChild(ripple);
+
+    ripple.addEventListener('animationend', () => { ripple.remove() });
+}
