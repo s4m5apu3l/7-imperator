@@ -118,7 +118,7 @@ if (ScrollTrigger.isTouch !== 1) {
         scrollTrigger: {
           trigger: item,
           start: "-660",
-          markers: true
+          // markers: true
           // end: "top",/
           // scrub: true,
         },
