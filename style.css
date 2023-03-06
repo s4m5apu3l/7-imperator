@@ -517,7 +517,7 @@ main {
   height: 52px;
   background: url("data:image/svg+xml,%3Csvg width='1536' height='50' viewBox='0 0 1536 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H1536L309.5 49.5L0 0Z' fill='white'/%3E%3C/svg%3E%0A")
     no-repeat;
-    background-position: 8% 102%;
+  background-position: 8% 102%;
 }
 
 .l-train__section::after {
@@ -732,11 +732,10 @@ main {
 }
 
 .js-swiper__content .swiper-slide {
-  clip-path: polygon(8% 0, 100% 0%, 93% 100%, 0% 100%);
   overflow: hidden;
-  max-width: 344px;
+  max-width: 314px;
   height: 450px;
-  margin-right: -19px;
+  margin-right: 5px;
 }
 .js-swiper__content .swiper-slide img {
   width: 100%;
@@ -1343,9 +1342,6 @@ main {
   max-width: 339px;
 }
 
-.l-faces__text {
-}
-
 .l-faces__text .l-border {
   position: relative;
   padding: 40px;
@@ -1647,10 +1643,31 @@ span.ripple-span {
   .l-whatis__section::before {
     width: 54%;
   }
+  .l-kids__section h3 {
+    display: none;
+  }
+  .l-kids__section .l-profit__mobile-title {
+    display: block;
+    position: relative;
+  }
+
+  .l-kids__section .l-profit__mobile-title::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 30%;
+    height: 40%;
+    background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
+  }
+
+  .l-kids__video a {
+    flex-direction: column;
+  }
 }
+/* 1350px */
 
 @media screen and (max-width: 1200px) {
-  
   .l-wrapper {
     padding: 0 50px;
   }
@@ -1771,10 +1788,10 @@ span.ripple-span {
   }
 
   .l-history__title .l-profit__mobile-title::before {
-    background: linear-gradient(269.54deg, #FFD600 -4.14%, #FFAD00 102.76%);
+    background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
   }
 }
-
+/* 1200px */
 
 @media screen and (max-width: 1090px) {
   .l-whatis__title {
@@ -1803,16 +1820,17 @@ span.ripple-span {
   }
 
   .l-whatis__section {
-    padding:100px 0;
+    padding: 100px 0;
   }
 }
+/* 1090px */
 
 @media screen and (max-width: 900px) {
   .l-train__title h2 {
     font-size: 40px;
   }
   .l-profit__list-item .l-item__text span:last-child {
-    font-size: 14px
+    font-size: 14px;
   }
   .l-profit__list-item .l-item__text span:first-child {
     font-size: 16px;
@@ -1826,6 +1844,7 @@ span.ripple-span {
     height: 102px;
   }
 }
+/* 900px */
 
 @media screen and (max-width: 768px) {
   .l-profit__mobile-title::before {
@@ -1872,7 +1891,6 @@ span.ripple-span {
   }
   .l-whatis__list ul {
     gap: 10px;
-
   }
   .l-whatis__list .l-profit__list-item {
     align-items: center;
@@ -1913,6 +1931,12 @@ span.ripple-span {
   .l-train__text {
     bottom: 180px;
   }
+  .l-kids__video {
+    flex-direction: column;
+  }
+  .l-kids__video span {
+    text-align: center;
+  }
 }
 /* 670px */
 
@@ -1947,9 +1971,9 @@ span.ripple-span {
   .l-train__list ul li {
     width: 90px;
     height: 90px;
-  } 
+  }
 
-  .l-train__text *{
+  .l-train__text * {
     font-size: 14px;
   }
   .l-train__text {
@@ -1960,7 +1984,6 @@ span.ripple-span {
   }
   .l-train__list {
     padding-bottom: 40px;
-    
   }
   .l-train__list ul {
     gap: 5px;
@@ -2005,6 +2028,20 @@ span.ripple-span {
   .l-history__title .l-profit__mobile-title::before {
     height: 36px;
   }
+
+  .l-kids__content {
+    background: unset;
+  }
+
+  .js-swiper__content .swiper-slide {
+    border-left: 5px solid #ffd600;
+    margin-right: 20px;
+  }
+
+  .l-kids__text {
+    background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
+    margin: 20px;
+  }
 }
 
 /* 560px */
@@ -2012,6 +2049,9 @@ span.ripple-span {
 @media screen and (max-width: 450px) {
   .l-train__title h2 {
     font-size: 25px;
+  }
+  .l-history__section {
+    padding: 70px 0 20px 0;
   }
 }
 
@@ -2099,7 +2139,7 @@ span.ripple-span {
     white-space: unset;
   }
   .l-train__text span:first-child::after,
-  .l-train__text span:first-child::before{
+  .l-train__text span:first-child::before {
     display: none;
   }
 
@@ -2125,7 +2165,6 @@ span.ripple-span {
   }
   .l-profit__list-item .l-item__text {
     text-align: start;
-
   }
 
   .l-whatis__section::after {
@@ -2147,6 +2186,13 @@ span.ripple-span {
   }
   .l-history__title {
     padding-right: 0;
+  }
+
+  .l-kids__text span {
+    font-size: 14px;
+  }
+  .l-kids__text {
+    padding: 2px;
   }
 }
 /* 425px */
@@ -2186,5 +2232,4 @@ span.ripple-span {
   .l-train__title h2 {
     font-size: 18px;
   }
-
 }
