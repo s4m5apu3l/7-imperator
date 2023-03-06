@@ -237,7 +237,7 @@ function sliderPrice() {
   result.textContent = `${formatResult} руб`;
 
   let bulletPosition = (rangePrice.value - 3300) / (rangeMax - rangeMin);
-  rangePriceValue.style.left = bulletPosition * 379 + "px";
+  rangePriceValue.style.left = bulletPosition * 95 + "%";
 }
 
 function sliderDays() {
@@ -256,7 +256,7 @@ function sliderDays() {
   result.textContent = `${formatResult} руб`;
 
   let bulletPosition = (rangeDays.value - 60) / (rangeMax - rangeMin);
-  rangeDaysValue.style.left = bulletPosition * 379 + "px";
+  rangeDaysValue.style.left = bulletPosition * 95 + "%";
 }
 sliderDays();
 sliderPrice();
