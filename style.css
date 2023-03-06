@@ -1753,18 +1753,57 @@ span.ripple-span {
     bottom: 45%;
     max-width: 50%;
   }
-  .l-whatis__section::after {
-    background-position: 24%;
-  }
+
 
   .l-whatis__section::before {
     clip-path: polygon(25% 0%, 100% 0%, 100% 97.5%, 0% 100%);
+  }
+
+  .l-whatis__left-text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .l-whatis__title {
+    text-align: center;
+  }
+  .l-whatis__section::before {
+    clip-path: unset;
+    height: 50%;
+    width: 100%;
+    bottom: 40px;
+    top: unset;
+    z-index: -3;
+    clip-path: polygon(0 0, 100% 0%, 100% 96%, 0% 100%);
+  }
+  .l-whatis__section::after {
+    height: 54%;
+    background-position: bottom;
+  }
+
+  .l-whatis__content {
+    flex-direction: column;
+  }
+
+  .l-whatis__list ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .l-whatis__section {
+    padding:100px 0;
   }
 }
 
 @media screen and (max-width: 900px) {
   .l-train__title h2 {
     font-size: 40px;
+  }
+  .l-profit__list-item .l-item__text span:last-child {
+    font-size: 14px
+  }
+  .l-profit__list-item .l-item__text span:first-child {
+    font-size: 16px;
   }
 }
 
@@ -1811,7 +1850,19 @@ span.ripple-span {
     width: 120px;
     height: 120px;
   }
+  .l-whatis__list ul {
+    gap: 10px;
 
+  }
+  .l-whatis__list .l-profit__list-item {
+    align-items: center;
+  }
+  .l-profit__list-item .l-item__text {
+    text-align: center;
+  }
+  .l-whatis__content {
+    gap: 55px;
+  }
 }
 
 @media screen and (max-width: 670px) {
@@ -1880,6 +1931,36 @@ span.ripple-span {
   }
   .l-train {
     padding: 70px 0 109px 0;
+  }
+
+  .l-whatis__list {
+    margin-top: 20px;
+  }
+
+  .l-whatis__list ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .l-whatis__content {
+    padding-top: 30px;
+  }
+
+  .l-whatis__section::after {
+    height: 60%;
+  }
+  .l-whatis__section::before {
+    bottom: 0;
+  }
+  .l-whatis__list .l-profit__list-item {
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .l-whatis__content-right img {
+    width: 300px;
+  }
+  .l-whatis__left-text {
+    font-size: 16px;
   }
 }
 
@@ -1991,7 +2072,28 @@ span.ripple-span {
   .l-train {
     padding: 70px 0 60px 0;
   }
+  .l-whatis__list .l-profit__list-item {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .l-profit__list-item .l-item__text {
+    text-align: start;
 
+  }
+
+  .l-whatis__section::after {
+    clip-path: polygon(0 0, 100% 0%, 100% 97%, 0 89%);
+  }
+
+  .l-whatis__content {
+    gap: 100px;
+  }
+
+  .l-whatis__list ul {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 385px) {
