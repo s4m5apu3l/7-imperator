@@ -854,14 +854,14 @@ main {
 }
 
 .l-category__items ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
 }
 .l-category__items ul li {
   height: 505px;
-  width: 385px;
+  width: 100%;
+  max-width: 380px;
   display: flex;
   align-items: flex-end;
   padding: 41px 30px;
@@ -874,10 +874,10 @@ main {
 .l-category__items ul li::before {
   content: "";
   top: 4px;
-  left: 1px;
+  left: -4px;
 
   position: absolute;
-  width: 380px;
+  width: 100%;
   height: 363px;
 }
 
@@ -1670,6 +1670,10 @@ span.ripple-span {
   .l-info__content .l-train--img {
     padding-right: 40px;
   }
+  .l-category__link a::before,
+  .l-category__link a::after {
+    display: none;
+  }
 }
 /* 1350px */
 
@@ -1807,6 +1811,35 @@ span.ripple-span {
     align-items: center;
     flex-direction: column;
   }
+
+  .l-category__items ul {
+    grid-template-columns: 1fr;
+  }
+  .l-category__items ul li {
+    place-self: center;
+    max-width: 500px;
+  }
+  .l-category__title h3 span {
+    background: transparent;
+    white-space: inherit;
+  }
+  .l-category__title h3 span::before,
+  .l-category__title h3 span::after {
+    display: none;
+  }
+  .l-category__title h3 {
+    position: relative;
+  }
+  .l-category__title h3:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    top: 0;
+    height: 64%;
+    background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
+  }
 }
 /* 1200px */
 
@@ -1930,6 +1963,10 @@ span.ripple-span {
   }
   .l-history__title .l-profit__mobile-title::before {
     height: 51px;
+  }
+
+  .l-category__link {
+    padding-top: 50px;
   }
 }
 
@@ -2068,6 +2105,15 @@ span.ripple-span {
   .l-history__timeline {
     padding-left: 35px;
   }
+  .l-category__section {
+    padding: 100px 0;
+  }
+  .l-category__content {
+    padding-top: 40px;
+  }
+  .l-category__items ul .l-title {
+    font-size: 40px;
+  }
 }
 
 /* 560px */
@@ -2086,6 +2132,10 @@ span.ripple-span {
 }
 
 @media screen and (max-width: 425px) {
+  .l-category__items .l-text,
+  .l-category__items .l-white {
+    font-size: 14px;
+  }
   .l-train__list li span {
     font-size: 20px;
   }
@@ -2221,6 +2271,21 @@ span.ripple-span {
   }
   .l-kids__text {
     padding: 2px;
+  }
+  .l-category__items ul li {
+    padding: 20px 20px 14px 20px;
+    max-width: 300px;
+    max-height: 340px;
+  }
+  .l-category__items ul li::before {
+    height: 235px;
+  }
+  .l-category__items .l-block {
+    align-items: flex-end;
+  }
+  .l-category__link  a{
+    font-size: 14px;
+    padding: 17px 45px;
   }
 }
 /* 425px */
