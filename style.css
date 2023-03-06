@@ -1650,6 +1650,7 @@ span.ripple-span {
 }
 
 @media screen and (max-width: 1200px) {
+  
   .l-wrapper {
     padding: 0 50px;
   }
@@ -1746,23 +1747,34 @@ span.ripple-span {
     justify-content: center;
     gap: 10px;
   }
-
   .l-train__text {
     position: absolute;
     right: 4%;
     bottom: 45%;
     max-width: 50%;
   }
-
-
   .l-whatis__section::before {
     clip-path: polygon(25% 0%, 100% 0%, 100% 97.5%, 0% 100%);
   }
-
   .l-whatis__left-text {
     text-align: center;
   }
+
+  .l-history__title {
+    padding-right: 30px;
+  }
+  .l-history__map img {
+    width: 100%;
+  }
+  .l-history__title h3 {
+    display: none;
+  }
+
+  .l-history__title .l-profit__mobile-title::before {
+    background: linear-gradient(269.54deg, #FFD600 -4.14%, #FFAD00 102.76%);
+  }
 }
+
 
 @media screen and (max-width: 1090px) {
   .l-whatis__title {
@@ -1804,6 +1816,14 @@ span.ripple-span {
   }
   .l-profit__list-item .l-item__text span:first-child {
     font-size: 16px;
+  }
+
+  .l-history__title h2 {
+    font-size: 40px;
+  }
+
+  .l-history__title .l-profit__mobile-title::before {
+    height: 102px;
   }
 }
 
@@ -1863,7 +1883,22 @@ span.ripple-span {
   .l-whatis__content {
     gap: 55px;
   }
+
+  .l-history__map {
+    margin-top: 10px;
+  }
+  .l-history {
+    grid-template-columns: 1fr;
+  }
+  .l-history__timeline {
+    padding-left: 100px;
+  }
+  .l-history__title .l-profit__mobile-title::before {
+    height: 51px;
+  }
 }
+
+/* 768px */
 
 @media screen and (max-width: 670px) {
   .l-train__title h2 {
@@ -1879,6 +1914,7 @@ span.ripple-span {
     bottom: 180px;
   }
 }
+/* 670px */
 
 @media screen and (max-width: 560px) {
   .l-hero--img img {
@@ -1962,7 +1998,16 @@ span.ripple-span {
   .l-whatis__left-text {
     font-size: 16px;
   }
+
+  .l-history__title h2 {
+    font-size: 28px;
+  }
+  .l-history__title .l-profit__mobile-title::before {
+    height: 36px;
+  }
 }
+
+/* 560px */
 
 @media screen and (max-width: 450px) {
   .l-train__title h2 {
@@ -2094,7 +2139,17 @@ span.ripple-span {
   .l-whatis__list ul {
     padding: 0;
   }
+  .l-profit__mobile-title h2.c-title {
+    font-size: 25px;
+  }
+  .l-history__timeline {
+    padding-left: 52px;
+  }
+  .l-history__title {
+    padding-right: 0;
+  }
 }
+/* 425px */
 
 @media screen and (max-width: 385px) {
   .l-train__list {
