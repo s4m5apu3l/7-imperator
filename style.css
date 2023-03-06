@@ -1301,7 +1301,7 @@ main {
 /* l-faces section start */
 
 .l-faces__section {
-  padding: 80px 0 160px 0;
+  padding: 80px 0 30px 0;
 }
 .l-faces__title {
   text-align: center;
@@ -1397,12 +1397,29 @@ main {
 
 /* l-phone__section start */
 .l-phone__section {
+  padding: 123px 0;
+  /* bottom: -50px; */
+}
+
+.l-phone__section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
   background-image: url("data:image/svg+xml,%3Csvg width='1536' height='800' viewBox='0 0 1536 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L363.5 32.5L1120.5 8.5L1536 46.5V759L1152 800L350.5 784L0 800V0Z' fill='%23F6F6F6'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
-  background-size: 100%;
-  padding: 123px 0;
-  bottom: -50px;
+  background-size: cover;
+  z-index: 11;
 }
+.l-phone__section .l-wrapper {
+  position: relative;
+  z-index: 15;
+}
+
 .l-phone__content {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -1505,6 +1522,7 @@ main {
 .l-footer__section {
   position: relative;
   overflow: hidden;
+  /* margin-top: -50px; */
 }
 .l-footer__bg {
   /* background: url(./assets/img/footer-bg.png) no-repeat; */
@@ -1853,6 +1871,9 @@ span.ripple-span {
     height: 64%;
     background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
   }
+  .l-phone__content {
+    padding-right: 0;
+  }
 }
 /* 1200px */
 
@@ -1899,7 +1920,39 @@ span.ripple-span {
     padding: 20px;
   }
   .l-faces__content {
-    grid-template-columns: .7fr 1fr;
+    grid-template-columns: 0.7fr 1fr;
+  }
+  .l-phone__content {
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+  .l-phone__text p {
+    max-width: 100%;
+  }
+  .l-phone__bg {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .l-phone__swiper .swiper-wrapper {
+    margin-left: 0;
+  }
+  .l-phone__section::before {
+    height: 100%;
+
+    background-position: 16%;
+    padding-bottom: 30px;
+  }
+  .l-phone__text .last {
+    position: absolute;
+    bottom: -65px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  .l-phone__swiper .swiper-slide img {
+    left: -2px;
   }
 }
 /* 1090px */
@@ -2170,6 +2223,9 @@ span.ripple-span {
     text-align: start;
     padding-left: 20px;
   }
+  .l-phone__section {
+    padding: 95px 0;
+  }
 }
 
 /* 560px */
@@ -2395,6 +2451,13 @@ span.ripple-span {
   }
   .l-faces__content {
     padding-top: 40px;
+  }
+  .l-phone__text p,
+  .l-phone__text .last {
+    font-size: 16px;
+  }
+  .l-phone__text p {
+    margin-bottom: 0;
   }
 }
 /* 425px */
