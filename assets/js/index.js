@@ -10,12 +10,12 @@ const container = document.querySelector(".l-hero__left");
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 if (ScrollTrigger.isTouch !== 1) {
-  container.addEventListener("mousemove", function (event) {
-    const x = event.clientX / container.offsetWidth;
-    const y = event.clientY / container.offsetHeight;
+  // container.addEventListener("mousemove", function (event) {
+  //   const x = event.clientX / container.offsetWidth;
+  //   const y = event.clientY / container.offsetHeight;
 
-    parallax.style.transform = `translate(-${x * 10}px, -${y * 10}px)`;
-  });
+  //   parallax.style.transform = `translate(-${x * 10}px, -${y * 10}px)`;
+  // });
 
   let smoother = ScrollSmoother.create({
     wrapper: ".smooth-wrapper",
@@ -65,7 +65,7 @@ if (ScrollTrigger.isTouch !== 1) {
     ".l-profit__list-item",
     { opacity: 0, x: -200 },
     { opacity: 1, x: 0,
-      duration: 1,
+      duration: .6,
       stagger: 0.3,
       scrollTrigger: {
         trigger: ".l-profit__list-item",
@@ -99,7 +99,7 @@ if (ScrollTrigger.isTouch !== 1) {
           trigger: item,
           start: "-750",
           end: "top",
-          scrub: true,
+          // scrub: true,
         },
       }
     );
@@ -166,6 +166,27 @@ if (ScrollTrigger.isTouch !== 1) {
       }
     );
   });
+
+  let fadeOpacity = gsap.utils.toArray(".fadeOpacity");
+
+  fadeOpacity.forEach((item) => {
+    gsap.fromTo(
+      item,
+      { opacity: 0},
+      {
+        opacity: 1,
+        duration: .4,
+        scrollTrigger: {
+          trigger: item,
+          // start: "500",
+          
+          // end: "top",/
+          // scrub: true,
+        },
+      }
+    );
+  });
+  
   
 }
 
@@ -176,6 +197,7 @@ var swiperKids = new Swiper(".l-kids__swiper", {
   slidesPerView: "auto",
   // spaceBetween: ,
   // loop: true,
+  centered: true,
   speed: 400,
   grabCursor: true,
   freeMode: true,
@@ -194,13 +216,20 @@ var swiperGallery = new Swiper(".l-gallery__swiper", {
   // cssMode: true,
 });
 
+
+
+const textInstagram = document.querySelector('.l-phone__text .last');
+const slideText = [
+  {slide: 1, text: '@imperator_franchise'},
+  {slide: 2, text: '@imperator_ykt'},
+  {slide: 3, text: '@imperator_ykt'},
+];
+
 var swiperGallery = new Swiper(".l-phone__swiper", {
   slidesPerView: 1,
-  // spaceBetween: ,
-  // loop: true,
+  loop: true,
   speed: 1200,
   grabCursor: true,
-  // freeMode: true,
   lazyLoading: true,
   effect: "fade",
   pagination: {
@@ -208,10 +237,19 @@ var swiperGallery = new Swiper(".l-phone__swiper", {
     type: "bullets",
   },
   autoplay: {
-    delay: 4000,
+    delay: 2000,
     disableOnInteraction: false,
   },
+
+  on: {
+    slideChange: function() {
+      const activeSlide = swiperGallery.realIndex + 1;
+      const slideValue = slideText.find(slide => slide.slide === activeSlide);
+      textInstagram.textContent = slideValue.text;
+    },
+  },
 });
+
 
 // calc range slider
 const rangePrice = document.querySelector("#price");

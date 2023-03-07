@@ -1,24 +1,18 @@
 @font-face {
   font-family: "Ruberoid-c";
-  src: url(./assets/fonts/Ruberoid-Bold.woff2) format("woff2"),
-    url(./assets/fonts/Ruberoid-Bold.woff) format("woff"),
-    url(./assets/fonts/Ruberoid-Bold.ttf) format("opentype");
+  src: url(./assets/fonts/Ruberoid-ExtraBold.woff2) format("woff2"),
+    url(./assets/fonts/Ruberoid-ExtraBold.woff) format("woff"),
+    url(./assets/fonts/Ruberoid-ExtraBold.ttf) format("opentype");
   font-weight: 700;
 }
 @font-face {
   font-family: "Ruberoid-c";
-  src: url(./assets/fonts/Ruberoid-Regular.woff2) format("woff2"),
-    url(./assets/fonts/Ruberoid-Regular.woff) format("woff"),
-    url(./assets/fonts/Ruberoid-Regular.ttf) format("opentype");
+  src: url(./assets/fonts/Ruberoid-Medium.woff2) format("woff2"),
+    url(./assets/fonts/Ruberoid-Medium.woff) format("woff"),
+    url(./assets/fonts/Ruberoid-Medium.ttf) format("opentype");
   font-weight: 400;
 }
-@font-face {
-  font-family: "Ruberoid-c";
-  src: url(./assets/fonts/Ruberoid-Light.woff2) format("woff2"),
-    url(./assets/fonts/Ruberoid-Light.woff) format("woff"),
-    url(./assets/fonts/Ruberoid-Light.ttf) format("opentype");
-  font-weight: 300;
-}
+
 
 @import url(./assets/css/normalize.css);
 
@@ -60,7 +54,7 @@ main {
 .c-title {
   font-weight: 700;
   font-size: 50px;
-  line-height: 130%;
+  line-height: 65px;
   text-transform: uppercase;
   color: #343434;
 }
@@ -376,6 +370,7 @@ main {
 .l-hero--img img {
   position: relative;
   z-index: 2;
+  max-width: 500px;
 }
 
 .l-sun-bg {
@@ -437,7 +432,7 @@ main {
   align-self: flex-end;
   font-weight: 400;
   font-size: 40px;
-  line-height: 130%;
+  line-height: 52px;
   text-align: right;
   text-transform: uppercase;
   color: #343434;
@@ -493,6 +488,10 @@ main {
 .l-train--img {
   display: flex;
   justify-content: center;
+  max-width: 300px;
+}
+.l-train--img img {
+  width: 100%;
 }
 .l-train__section::before {
   content: "";
@@ -570,21 +569,22 @@ main {
 }
 
 .l-train__list li span {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 40px;
   line-height: 130%;
   text-align: center;
   color: #343434;
 }
-.l-train__list li span:first-child {
-  font-weight: 700;
+
+.l-train__list li span:last-child {
+  font-size: 20px;
 }
 
 .l-train__text * {
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
-  text-transform: uppercase;
+  text-transform: inherit;
   color: #343434;
 }
 
@@ -852,6 +852,9 @@ main {
 .l-category__content {
   padding: 80px 0 0 0;
 }
+.l-info__img {
+  max-width: 479px;
+}
 
 .l-category__items ul {
   display: grid;
@@ -864,7 +867,7 @@ main {
   max-width: 380px;
   display: flex;
   align-items: flex-end;
-  padding: 41px 30px;
+  padding: 41px 30px 20px;
   background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
   clip-path: polygon(29% 0, 100% 0, 100% 74%, 69% 100%, 0 100%, 0 24%);
@@ -899,7 +902,7 @@ main {
 
 .l-category__items ul .l-title {
   font-size: 60px;
-  line-height: 130%;
+  line-height: 45px;
   font-weight: 700;
   text-transform: uppercase;
   color: #343434;
@@ -908,6 +911,7 @@ main {
 .l-category__items li p {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   max-width: 50%;
   gap: 5px;
 }
@@ -928,8 +932,10 @@ main {
 }
 .l-category__items .l-block {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
+  vertical-align: text-top;
+  height: 90px;
 }
 
 .l-category__link {
@@ -1086,6 +1092,9 @@ main {
   text-align: center;
   color: #343434;
 }
+.l-calc__text-bold {
+  text-align: center;
+}
 
 .l-calc__text-bold span {
   font-size: 16px;
@@ -1199,6 +1208,7 @@ main {
 }
 
 #price::before {
+  font-family: "Ruberoid-c";
   content: "3200";
   position: absolute;
   left: 0;
@@ -1210,6 +1220,7 @@ main {
   top: 10px;
 }
 #price::after {
+  font-family: "Ruberoid-c";
   content: "7000";
   position: absolute;
   right: 0;
@@ -1449,6 +1460,7 @@ main {
   line-height: 130%;
   font-weight: 700;
   text-transform: uppercase;
+  margin-left: 26px;
   color: #343434;
   width: fit-content;
 }
@@ -1522,7 +1534,7 @@ main {
 .l-footer__section {
   position: relative;
   overflow: hidden;
-  /* margin-top: -50px; */
+  margin-top: -50px;
 }
 .l-footer__bg {
   /* background: url(./assets/img/footer-bg.png) no-repeat; */
@@ -1565,13 +1577,14 @@ main {
 .l-footer__text {
   margin-bottom: 60px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 130%;
   text-align: center;
   color: #ffffff;
 }
 .l-footer__text span {
   color: #ffd600;
+  font-weight: 700;
 }
 .l-footer__btn a {
   font-family: "Ruberoid-c", sans-serif;
@@ -1584,8 +1597,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 22px 75px;
-
+  padding: 22px 20px;
+  text-align: center;
+  width: 100%;
   max-width: 380px;
   background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
   border-radius: 60.5px;
@@ -1626,6 +1640,9 @@ span.ripple-span {
 @media screen and (min-width: 1600px) {
   .l-whatis__section::before {
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .swiper-free-mode>.swiper-wrapper {
+    justify-content: center;
   }
 }
 
@@ -1992,6 +2009,7 @@ span.ripple-span {
   }
   .c-title {
     font-size: 40px;
+    line-height: 50px;
   }
   .l-wrapper {
     padding: 0 20px;
@@ -2065,6 +2083,7 @@ span.ripple-span {
     top: -40%;
     right: 0;
     max-width: 50%;
+    text-align: left;
   }
 }
 
@@ -2106,6 +2125,7 @@ span.ripple-span {
   }
   .c-title {
     font-size: 28px;
+    line-height: 40px;
   }
   .l-profit__mobile-title::before {
     height: 72px;
@@ -2277,6 +2297,7 @@ span.ripple-span {
   }
   .c-title {
     font-size: 25px;
+    line-height: 32px;
   }
   .l-hero__title h1 {
     font-size: 25px;
@@ -2417,7 +2438,7 @@ span.ripple-span {
     height: 235px;
   }
   .l-category__items .l-block {
-    align-items: flex-end;
+    height: 72px;
   }
   .l-category__link a {
     font-size: 14px;
@@ -2459,6 +2480,18 @@ span.ripple-span {
   .l-phone__text p {
     margin-bottom: 0;
   }
+  .l-footer__text {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+  .bg-yellow::before {
+    left: -15px;
+    width: 16px;
+  }
+  .bg-yellow::after {
+    width: 16px;
+    right: -15px;
+  }
 }
 /* 425px */
 
@@ -2481,6 +2514,7 @@ span.ripple-span {
   }
   .c-title {
     font-size: 20px;
+    line-height: 26px;
   }
   .l-profit__mobile-title::before {
     height: 49px;
