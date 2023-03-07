@@ -303,3 +303,32 @@ const myModal = new HystModal({
   linkAttributeName: "data-hystmodal",
   // настройки (не обязательно), см. API
 });
+
+
+$(document).ready(function () {
+  $(document).foundation();
+
+  $(function () {
+    $(document).on("click", ".js-select__input", function () {
+      $(this).parents(".js-select").toggleClass("active");
+    });
+    $(document).mouseup(function (e) {
+      // событие клика по веб-документу
+      var div = $(".js-select.active"); // тут указываем ID элемента
+      if (
+        !div.is(e.target) && // если клик был не по нашему блоку
+        div.has(e.target).length === 0
+      ) {
+        // и не по его дочерним элементам
+        div.removeClass("active"); // скрываем его
+      }
+    });
+    $(document).on("click", ".active .js-select__list span", function () {
+      var id = $(this).data("id");
+      var parent = $(this).parents(".js-select");
+      parent.find(".js-select__input").text($(this).text());
+      parent.find("input").val(id).attr("value", id);
+      parent.removeClass("active");
+    });
+  });
+});
