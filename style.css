@@ -243,6 +243,22 @@ main {
   position: relative;
   padding: 0 29px;
 }
+
+.l-hero__title h1 span {
+  white-space: nowrap;
+}
+
+.l-hero__title h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffad00;
+  width: 100%;
+  height: 65px;
+  z-index: -1;
+}
+
 .l-hero__title h1 .mama{
   position: relative;
   left: -26px;
