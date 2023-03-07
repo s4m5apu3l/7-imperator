@@ -242,10 +242,13 @@ main {
 .l-hero__title h1 {
   position: relative;
   padding: 0 29px;
+  padding-top: 5px;
 }
 
 .l-hero__title h1 span {
   white-space: nowrap;
+  display: block;
+  margin-top: -5px;
 }
 
 .l-hero__title h1::before {
