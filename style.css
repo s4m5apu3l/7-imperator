@@ -369,7 +369,7 @@ main {
 
 .l-hero--img img {
   position: relative;
-  z-index: 2;
+  z-index: -1;
   max-width: 500px;
 }
 
@@ -378,7 +378,7 @@ main {
   width: 640px;
   height: 640px;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
 
 /* l-hero-section end ======================*/
@@ -2295,6 +2295,9 @@ span.ripple-span {
   .l-train__list li span {
     font-size: 20px;
   }
+  .l-train__list li span:last-child {
+    font-size: 14px;
+  }
   .c-title {
     font-size: 25px;
     line-height: 32px;
@@ -2505,6 +2508,9 @@ span.ripple-span {
   }
   .l-train__list li span {
     font-size: 16px;
+  }
+  .l-train__list li span:last-child {
+    font-size: 12px;
   }
 }
 
