@@ -1,27 +1,25 @@
+
 @font-face {
   font-family: "Ruberoid-c";
-  src: url(./assets/fonts/Ruberoid-ExtraBold.woff2) format("woff2"),
-    url(./assets/fonts/Ruberoid-ExtraBold.woff) format("woff"),
-    url(./assets/fonts/Ruberoid-ExtraBold.ttf) format("opentype");
+  src: url("ruberoid-extrabold-webfont.woff2") format("woff2"),
+    url("ruberoid-extrabold-webfont.woff") format("woff"),
+    url("ruberoid-extrabold-webfont.ttf") format("truetype");
   font-weight: 700;
-  size-adjust: 105%;
-}
-@font-face {
-  font-family: "Ruberoid-c";
-  src: url(./assets/fonts/Ruberoid-Medium.woff2) format("woff2"),
-    url(./assets/fonts/Ruberoid-Medium.woff) format("woff"),
-    url(./assets/fonts/Ruberoid-Medium.ttf) format("opentype");
-  font-weight: 400;
+  font-style: normal;
   size-adjust: 105%;
 }
 
+@font-face {
+  font-family: "Ruberoid-c";
+  src: url("ruberoid-medium-webfont.woff2") format("woff2"),
+    url("ruberoid-medium-webfont.woff") format("woff"),
+    url("ruberoid-medium-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  size-adjust: 105%;
+}
 
 @import url(./assets/css/normalize.css);
-
-.c-pbottom-100 {
-  padding-bottom: 1000px;
-  background-color: red;
-}
 
 * {
   box-sizing: border-box;
@@ -252,7 +250,7 @@ main {
 }
 
 .l-hero__title h1::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -262,7 +260,7 @@ main {
   z-index: -1;
 }
 
-.l-hero__title h1 .mama{
+.l-hero__title h1 .mama {
   position: relative;
   left: -26px;
   padding: 0 29px;
@@ -1662,7 +1660,7 @@ span.ripple-span {
   .l-whatis__section::before {
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
-  .swiper-free-mode>.swiper-wrapper {
+  .swiper-free-mode > .swiper-wrapper {
     justify-content: center;
   }
 }
@@ -2516,7 +2514,7 @@ span.ripple-span {
     width: 16px;
     right: -15px;
   }
-  .l-footer__btn  a {
+  .l-footer__btn a {
     padding: 17px 20px;
   }
 }
