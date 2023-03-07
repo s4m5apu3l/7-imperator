@@ -245,10 +245,11 @@ main {
   position: relative;
   left: -26px;
   padding: 0 29px;
-  display: inline-block;
   white-space: nowrap;
-
   width: 102%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .l-sun-bg {
@@ -1597,7 +1598,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 22px 20px;
+  padding: 22px 50px;
   text-align: center;
   width: 100%;
   max-width: 380px;
@@ -2494,6 +2495,9 @@ span.ripple-span {
   .bg-yellow::after {
     width: 16px;
     right: -15px;
+  }
+  .l-footer__btn  a {
+    padding: 17px 20px;
   }
 }
 /* 425px */
