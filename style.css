@@ -1577,13 +1577,14 @@ main {
 .l-footer__text {
   margin-bottom: 60px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 130%;
   text-align: center;
   color: #ffffff;
 }
 .l-footer__text span {
   color: #ffd600;
+  font-weight: 700;
 }
 .l-footer__btn a {
   font-family: "Ruberoid-c", sans-serif;
@@ -1596,8 +1597,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 22px 75px;
-
+  padding: 22px 20px;
+  text-align: center;
+  width: 100%;
   max-width: 380px;
   background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
   border-radius: 60.5px;
@@ -2081,6 +2083,7 @@ span.ripple-span {
     top: -40%;
     right: 0;
     max-width: 50%;
+    text-align: left;
   }
 }
 
@@ -2476,6 +2479,18 @@ span.ripple-span {
   }
   .l-phone__text p {
     margin-bottom: 0;
+  }
+  .l-footer__text {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+  .bg-yellow::before {
+    left: -15px;
+    width: 16px;
+  }
+  .bg-yellow::after {
+    width: 16px;
+    right: -15px;
   }
 }
 /* 425px */
