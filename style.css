@@ -902,7 +902,7 @@ main {
 
 .l-category__items ul .l-title {
   font-size: 60px;
-  line-height: 40px;
+  line-height: 45px;
   font-weight: 700;
   text-transform: uppercase;
   color: #343434;
@@ -919,14 +919,14 @@ main {
 .l-category__items .l-white {
   font-weight: 400;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 130%;
   text-transform: uppercase;
   color: #ffffff;
 }
 .l-category__items .l-text {
   font-weight: 700;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 130%;
   text-transform: uppercase;
   color: #343434;
 }
@@ -2435,7 +2435,7 @@ span.ripple-span {
     height: 235px;
   }
   .l-category__items .l-block {
-    align-items: flex-end;
+    height: 72px;
   }
   .l-category__link a {
     font-size: 14px;
