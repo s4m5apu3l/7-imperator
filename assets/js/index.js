@@ -1,21 +1,8 @@
-// on hero section mouse parallax
-const parallax = document.querySelector(".l-hero--img img");
-const container = document.querySelector(".l-hero__left");
-
-// if (!("ontouchstart" in document.documentElement)) {
-// may be work when scrollSmooth undefiend
-// }
 
 // gsap scroll
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 if (ScrollTrigger.isTouch !== 1) {
-  // container.addEventListener("mousemove", function (event) {
-  //   const x = event.clientX / container.offsetWidth;
-  //   const y = event.clientY / container.offsetHeight;
-
-  //   parallax.style.transform = `translate(-${x * 10}px, -${y * 10}px)`;
-  // });
 
   let smoother = ScrollSmoother.create({
     wrapper: ".smooth-wrapper",
@@ -57,10 +44,6 @@ if (ScrollTrigger.isTouch !== 1) {
       },
     }
   );
-  // smoother.effects(".l-whatis__content-left", { speed: 0.9, lag: 0.4 });
-  // smoother.effects(".l-whatis__content-right", { speed: 0.9, lag: 0.4 });
-
-
   gsap.fromTo(
     ".l-profit__list-item",
     { opacity: 0, x: -200 },
@@ -72,8 +55,6 @@ if (ScrollTrigger.isTouch !== 1) {
       },
      }
   );
-
-
 
   gsap.fromTo(
     ".l-history__title",
@@ -110,20 +91,6 @@ if (ScrollTrigger.isTouch !== 1) {
       }
     );
   });
-
-  
-  // ScrollTrigger.create({
-  //   trigger: '.l-history__timeline',
-  //   start: 'top center',
-  //   onEnter: () => {
-  //     // When the timeline section comes into view, set the height of the timeline line to 100%
-  //     gsap.to(timelineLine, { height: '100%' });
-  //   },
-  //   // onLeaveBack: () => {
-  //   //   // When the timeline section leaves the view, set the height of the timeline line back to its original value
-  //   //   gsap.to(timelineLine, { height: '0%' });
-  //   // }
-  // });
 
   let fadeUp = gsap.utils.toArray(".fadeUp");
 
@@ -215,34 +182,26 @@ new ModalVideo(".js-modal-btn");
 
 var swiperKids = new Swiper(".l-kids__swiper", {
   slidesPerView: "auto",
-  // spaceBetween: ,
-  // loop: true,
   centered: true,
   speed: 400,
   grabCursor: true,
   freeMode: true,
   lazyLoading: true,
-  // cssMode: true,
 });
 
 var swiperGallery = new Swiper(".l-gallery__swiper", {
   slidesPerView: "auto",
-  // spaceBetween: ,
-  // loop: true,
   speed: 400,
   grabCursor: true,
   freeMode: true,
   lazyLoading: true,
-  // cssMode: true,
 });
-
-
 
 const textInstagram = document.querySelector('.l-phone__text .last');
 const slideText = [
   {slide: 1, text: '@imperator_franchise'},
   {slide: 2, text: '@imperator_ykt'},
-  {slide: 3, text: '@imperator_ykt'},
+  {slide: 3, text: '@imperator.msk'},
 ];
 
 var swiperGallery = new Swiper(".l-phone__swiper", {

@@ -1,16 +1,17 @@
 @font-face {
-  font-family: 'Ruberoid-c';
-  src: url('./assets/fonts/ruberoid-extrabold-webfont.eot');
-  src: url('./assets/fonts/ruberoid-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('./assets/fonts/ruberoid-extrabold-webfont.woff2') format('woff2'),
-       url('./assets/fonts/ruberoid-extrabold-webfont.woff') format('woff'),
-       url('./assets/fonts/ruberoid-extrabold-webfont.ttf') format('truetype'),
-       url('./assets/fonts/ruberoid-extrabold-webfont.svg#ruberoidextra_bold') format('svg');
+  font-family: "Ruberoid-c";
+  src: url("./assets/fonts/ruberoid-extrabold-webfont.eot");
+  src: url("./assets/fonts/ruberoid-extrabold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/ruberoid-extrabold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/ruberoid-extrabold-webfont.woff") format("woff"),
+    url("./assets/fonts/ruberoid-extrabold-webfont.ttf") format("truetype"),
+    url("./assets/fonts/ruberoid-extrabold-webfont.svg#ruberoidextra_bold")
+      format("svg");
   font-weight: 700;
   font-style: normal;
   /* size-adjust: 110%; */
 }
-
 
 @font-face {
   font-family: "Ruberoid-c";
@@ -187,7 +188,6 @@ main {
 }
 
 .title-bg {
-
 }
 
 .c-title__parent {
@@ -197,9 +197,7 @@ main {
 
 .c-title__parent span {
   position: relative;
-  
 }
-
 
 /* components end */
 
@@ -704,7 +702,7 @@ main {
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
-  transition: height .4s linear;
+  transition: height 0.4s linear;
 }
 .l-history__timeline li:last-child {
   padding-bottom: unset;
@@ -734,7 +732,7 @@ main {
   top: 20px;
   z-index: 1;
   background-color: #ffd600;
-  transition: height .4s linear;
+  transition: height 0.4s linear;
   /* opacity: 1; */
 }
 
@@ -855,12 +853,29 @@ main {
 /* l-kids section end  */
 
 .l-info__section {
-  background-image: url("data:image/svg+xml,%3Csvg width='1536' height='800' viewBox='0 0 1536 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L463.5 125.5L743.5 8.5L1536 46.5V759L1152 800L351.5 759L0 800V0Z' fill='%23F6F6F6'/%3E%3C/svg%3E%0A");
+  /* background-image: url("data:image/svg+xml,%3Csvg width='1536' height='800' viewBox='0 0 1536 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L463.5 125.5L743.5 8.5L1536 46.5V759L1152 800L351.5 759L0 800V0Z' fill='%23F6F6F6'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
-  background-size: 100%;
-
+  background-size: 100%; */
   padding: 160px 0 80px 0;
+
+  position: relative;
 }
+
+.l-info__section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='1536' height='800' viewBox='0 0 1536 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L363.5 32.5L1120.5 8.5L1536 46.5V759L1152 800L350.5 784L0 800V0Z' fill='%23F6F6F6'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
 .l-info__section .l-train {
   padding: 0;
 }
@@ -872,6 +887,9 @@ main {
 }
 .l-category__section .c-title {
   text-align: center;
+}
+.l-category__title .bg-yellow {
+  white-space: inherit;
 }
 
 .l-category__content {
@@ -1669,6 +1687,9 @@ span.ripple-span {
   .swiper-free-mode > .swiper-wrapper {
     justify-content: center;
   }
+  .l-hero--img {
+    margin-top: -10px;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -1715,16 +1736,6 @@ span.ripple-span {
     position: relative;
   }
 
-  .l-kids__section .l-profit__mobile-title::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    top: 30%;
-    height: 40%;
-    background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
-  }
-
   .l-kids__video a {
     flex-direction: column;
   }
@@ -1734,6 +1745,9 @@ span.ripple-span {
   .l-category__link a::before,
   .l-category__link a::after {
     display: none;
+  }
+  .l-kids__title .bg-yellow {
+    white-space: inherit;
   }
 }
 /* 1350px */
@@ -1819,16 +1833,6 @@ span.ripple-span {
     text-align: center;
     position: relative;
   }
-  .l-profit__mobile-title::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 127px;
-    background-color: #ffd600;
-    z-index: -1;
-  }
 
   .l-profit__text {
     font-size: 28px;
@@ -1863,17 +1867,13 @@ span.ripple-span {
   }
 
   .l-history__title {
-    padding-right: 30px;
+    padding-right: 70px;
   }
   .l-history__map img {
     width: 100%;
   }
   .l-history__title h3 {
     display: none;
-  }
-
-  .l-history__title .l-profit__mobile-title::before {
-    background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
   }
 
   .l-info__section .l-train--img {
@@ -1916,6 +1916,14 @@ span.ripple-span {
   }
   .l-phone__content {
     padding-right: 0;
+  }
+
+  .l-hero__title .title-bg {
+    left: 0;
+    width: 100%;
+  }
+  .l-history__title .bg-yellow {
+    white-space: inherit;
   }
 }
 /* 1200px */
@@ -2014,17 +2022,13 @@ span.ripple-span {
   .l-history__title h2 {
     font-size: 40px;
   }
-
-  .l-history__title .l-profit__mobile-title::before {
-    height: 102px;
+  .l-history__title span {
+    font-size: 40px;
   }
 }
 /* 900px */
 
 @media screen and (max-width: 768px) {
-  .l-profit__mobile-title::before {
-    height: 100px;
-  }
   .l-hero__section {
     padding-top: 50px;
     padding-bottom: 170px;
@@ -2035,7 +2039,10 @@ span.ripple-span {
   }
   .c-title {
     font-size: 40px;
-    line-height: 50px;
+  }
+
+  .c-title span {
+    font-size: 40px;
   }
   .l-wrapper {
     padding: 0 20px;
@@ -2087,9 +2094,6 @@ span.ripple-span {
   .l-history__timeline {
     padding-left: 100px;
   }
-  .l-history__title .l-profit__mobile-title::before {
-    height: 51px;
-  }
 
   .l-category__link {
     padding-top: 50px;
@@ -2110,6 +2114,12 @@ span.ripple-span {
     right: 0;
     max-width: 50%;
     text-align: left;
+  }
+  .l-train__title .bg-yellow {
+    white-space: inherit;
+  }
+  .l-history__title {
+    padding-right: 0;
   }
 }
 
@@ -2151,10 +2161,9 @@ span.ripple-span {
   }
   .c-title {
     font-size: 28px;
-    line-height: 40px;
   }
-  .l-profit__mobile-title::before {
-    height: 72px;
+  .c-title span {
+    font-size: 28px;
   }
 
   .l-profit__list {
@@ -2228,9 +2237,6 @@ span.ripple-span {
   .l-history__title h2 {
     font-size: 28px;
   }
-  .l-history__title .l-profit__mobile-title::before {
-    height: 36px;
-  }
 
   .l-kids__content {
     background: unset;
@@ -2271,6 +2277,9 @@ span.ripple-span {
   }
   .l-phone__section {
     padding: 95px 0;
+  }
+  .l-kids__section {
+    padding: 50px 0 70px 0;
   }
 }
 
@@ -2326,7 +2335,9 @@ span.ripple-span {
   }
   .c-title {
     font-size: 25px;
-    line-height: 32px;
+  }
+  .c-title span {
+    font-size: 25px;
   }
   .l-hero__title h1 {
     font-size: 25px;
@@ -2524,6 +2535,14 @@ span.ripple-span {
   .l-footer__btn a {
     padding: 17px 20px;
   }
+
+  .l-profit__section {
+    background-position: 81% 100%;
+  }
+  .l-phone__bg {
+    width: 100%;
+    background-position: 50%;
+  }
 }
 /* 425px */
 
@@ -2549,7 +2568,9 @@ span.ripple-span {
   }
   .c-title {
     font-size: 20px;
-    line-height: 26px;
+  }
+  .c-title span {
+    font-size: 20px;
   }
   .l-profit__mobile-title::before {
     height: 49px;
