@@ -4,6 +4,7 @@
     url(./assets/fonts/Ruberoid-ExtraBold.woff) format("woff"),
     url(./assets/fonts/Ruberoid-ExtraBold.ttf) format("opentype");
   font-weight: 700;
+  size-adjust: 105%;
 }
 @font-face {
   font-family: "Ruberoid-c";
@@ -11,6 +12,7 @@
     url(./assets/fonts/Ruberoid-Medium.woff) format("woff"),
     url(./assets/fonts/Ruberoid-Medium.ttf) format("opentype");
   font-weight: 400;
+  size-adjust: 105%;
 }
 
 
