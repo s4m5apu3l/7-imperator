@@ -241,7 +241,7 @@ main {
   position: relative;
   padding: 0 29px;
 }
-.l-hero__title h1 span {
+.l-hero__title h1 .mama{
   position: relative;
   left: -26px;
   padding: 0 29px;
@@ -249,7 +249,6 @@ main {
   width: 102%;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .l-sun-bg {
