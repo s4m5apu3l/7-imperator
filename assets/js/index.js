@@ -91,19 +91,39 @@ if (ScrollTrigger.isTouch !== 1) {
   itemsHistory.forEach((item) => {
     gsap.fromTo(
       item,
-      { opacity: 0, x: 100 },
+      { opacity: 0, y: 200 },
       {
         opacity: 1,
-        x: 0,
+        y: 0,
         scrollTrigger: {
           trigger: item,
           start: "-750",
           end: "top",
           // scrub: true,
+          onEnter: () => {
+            // gsap.to(item, { height: '100%' });
+          },
+
         },
+
+        
       }
     );
   });
+
+  
+  // ScrollTrigger.create({
+  //   trigger: '.l-history__timeline',
+  //   start: 'top center',
+  //   onEnter: () => {
+  //     // When the timeline section comes into view, set the height of the timeline line to 100%
+  //     gsap.to(timelineLine, { height: '100%' });
+  //   },
+  //   // onLeaveBack: () => {
+  //   //   // When the timeline section leaves the view, set the height of the timeline line back to its original value
+  //   //   gsap.to(timelineLine, { height: '0%' });
+  //   // }
+  // });
 
   let fadeUp = gsap.utils.toArray(".fadeUp");
 
