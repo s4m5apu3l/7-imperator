@@ -199,7 +199,7 @@ main {
 
 .header {
   background: rgba(0, 0, 0, 0.7);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -207,27 +207,57 @@ main {
   color: #fff;
   line-height: 70px;
   z-index: 120;
+  transition: all .4s ease;
 
+}
+
+#amofroms_main_wrapper {
+  max-width: 100% !important;
 }
 
 .l-header {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  align-items: center;
-  gap: 30px;
   height: 70px;
 }
-.l-header__nav ul {
+
+.l-header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0;
+  gap: 10px;
+  height: 100%;
 }
-.l-header__nav ul a {
+.l-header__nav {
+  width: 100%;
+}
+
+.l-header__nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.l-header__nav li a {
   font-size: 18px;
+  font-weight: 700;
   color: white;
   text-transform: uppercase;
+  transition: all .3s linear;
 }
+.l-header__nav li a:hover {
+  color: #cacaca;
+}
+
+.l-header__logo,
+.l-header__logo a {
+  display: flex;
+  align-items: center;
+}
+.l-header__logo a img {
+  height: 100%;
+  /* width: 100%; */
+}
+
 /* l-hero-section start */
 
 .l-hero__title .title-bg {
