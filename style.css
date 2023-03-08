@@ -1,16 +1,17 @@
 @font-face {
-  font-family: 'Ruberoid-c';
-  src: url('./assets/fonts/ruberoid-extrabold-webfont.eot');
-  src: url('./assets/fonts/ruberoid-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('./assets/fonts/ruberoid-extrabold-webfont.woff2') format('woff2'),
-       url('./assets/fonts/ruberoid-extrabold-webfont.woff') format('woff'),
-       url('./assets/fonts/ruberoid-extrabold-webfont.ttf') format('truetype'),
-       url('./assets/fonts/ruberoid-extrabold-webfont.svg#ruberoidextra_bold') format('svg');
+  font-family: "Ruberoid-c";
+  src: url("./assets/fonts/ruberoid-extrabold-webfont.eot");
+  src: url("./assets/fonts/ruberoid-extrabold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/ruberoid-extrabold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/ruberoid-extrabold-webfont.woff") format("woff"),
+    url("./assets/fonts/ruberoid-extrabold-webfont.ttf") format("truetype"),
+    url("./assets/fonts/ruberoid-extrabold-webfont.svg#ruberoidextra_bold")
+      format("svg");
   font-weight: 700;
   font-style: normal;
   /* size-adjust: 110%; */
 }
-
 
 @font-face {
   font-family: "Ruberoid-c";
@@ -185,11 +186,6 @@ main {
   line-height: 130%;
   color: #343434;
 }
-
-.title-bg {
-
-}
-
 .c-title__parent {
   display: flex;
   flex-direction: column;
@@ -197,11 +193,70 @@ main {
 
 .c-title__parent span {
   position: relative;
-  
 }
 
-
 /* components end */
+
+.header {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  color: #fff;
+  line-height: 70px;
+  z-index: 120;
+  transition: all .4s ease;
+
+}
+
+#amofroms_main_wrapper {
+  max-width: 100% !important;
+}
+
+.l-header {
+  height: 70px;
+}
+
+.l-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+}
+.l-header__nav {
+  width: 100%;
+}
+
+.l-header__nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.l-header__nav li a {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  transition: all .3s linear;
+}
+.l-header__nav li a:hover {
+  color: #cacaca;
+}
+
+.l-header__logo,
+.l-header__logo a {
+  display: flex;
+  align-items: center;
+}
+.l-header__logo a img {
+  height: 100%;
+  /* width: 100%; */
+}
 
 /* l-hero-section start */
 
@@ -704,7 +759,7 @@ main {
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
-  transition: height .4s linear;
+  transition: height 0.4s linear;
 }
 .l-history__timeline li:last-child {
   padding-bottom: unset;
@@ -734,7 +789,7 @@ main {
   top: 20px;
   z-index: 1;
   background-color: #ffd600;
-  transition: height .4s linear;
+  transition: height 0.4s linear;
   /* opacity: 1; */
 }
 
@@ -855,12 +910,29 @@ main {
 /* l-kids section end  */
 
 .l-info__section {
-  background-image: url("data:image/svg+xml,%3Csvg width='1536' height='800' viewBox='0 0 1536 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L463.5 125.5L743.5 8.5L1536 46.5V759L1152 800L351.5 759L0 800V0Z' fill='%23F6F6F6'/%3E%3C/svg%3E%0A");
+  /* background-image: url("data:image/svg+xml,%3Csvg width='1536' height='800' viewBox='0 0 1536 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L463.5 125.5L743.5 8.5L1536 46.5V759L1152 800L351.5 759L0 800V0Z' fill='%23F6F6F6'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
-  background-size: 100%;
-
+  background-size: 100%; */
   padding: 160px 0 80px 0;
+
+  position: relative;
 }
+
+.l-info__section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='1536' height='800' viewBox='0 0 1536 800' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L363.5 32.5L1120.5 8.5L1536 46.5V759L1152 800L350.5 784L0 800V0Z' fill='%23F6F6F6'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
 .l-info__section .l-train {
   padding: 0;
 }
@@ -872,6 +944,9 @@ main {
 }
 .l-category__section .c-title {
   text-align: center;
+}
+.l-category__title .bg-yellow {
+  white-space: inherit;
 }
 
 .l-category__content {
@@ -1661,6 +1736,83 @@ span.ripple-span {
   }
 }
 
+.js-select {
+  display: block;
+  position: relative;
+}
+.js-select.active .js-select__input::after {
+  transform: rotate(180deg);
+}
+.js-select.active .js-select__list {
+  display: block;
+  /* min-height: 250px; */
+  overflow-y: auto;
+}
+
+.js-select__input {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  padding: 10px 15px;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #9da7bb;
+}
+
+.js-select__input::after {
+  content: "";
+  width: 21px;
+  height: 10px;
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 1L8 7L1 0.999999' stroke='%23005999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  right: 15px;
+  top: 41%;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-select__input:hover {
+  box-shadow: 0px 0px 5px 0px rgb(26 83 181 / 35%);
+}
+
+.js-select__list {
+  display: none;
+  cursor: pointer;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  padding: 9px 0;
+  box-sizing: border-box;
+  /* max-height: 0; */
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 55px;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-select__list span {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-select__list span:hover {
+  background-color: #e5f3fe;
+}
+
 /* media quaries */
 @media screen and (min-width: 1600px) {
   .l-whatis__section::before {
@@ -1668,6 +1820,9 @@ span.ripple-span {
   }
   .swiper-free-mode > .swiper-wrapper {
     justify-content: center;
+  }
+  .l-hero--img {
+    margin-top: -10px;
   }
 }
 
@@ -1715,16 +1870,6 @@ span.ripple-span {
     position: relative;
   }
 
-  .l-kids__section .l-profit__mobile-title::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    top: 30%;
-    height: 40%;
-    background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
-  }
-
   .l-kids__video a {
     flex-direction: column;
   }
@@ -1734,6 +1879,9 @@ span.ripple-span {
   .l-category__link a::before,
   .l-category__link a::after {
     display: none;
+  }
+  .l-kids__title .bg-yellow {
+    white-space: inherit;
   }
 }
 /* 1350px */
@@ -1819,16 +1967,6 @@ span.ripple-span {
     text-align: center;
     position: relative;
   }
-  .l-profit__mobile-title::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 127px;
-    background-color: #ffd600;
-    z-index: -1;
-  }
 
   .l-profit__text {
     font-size: 28px;
@@ -1863,17 +2001,13 @@ span.ripple-span {
   }
 
   .l-history__title {
-    padding-right: 30px;
+    padding-right: 70px;
   }
   .l-history__map img {
     width: 100%;
   }
   .l-history__title h3 {
     display: none;
-  }
-
-  .l-history__title .l-profit__mobile-title::before {
-    background: linear-gradient(269.54deg, #ffd600 -4.14%, #ffad00 102.76%);
   }
 
   .l-info__section .l-train--img {
@@ -1916,6 +2050,14 @@ span.ripple-span {
   }
   .l-phone__content {
     padding-right: 0;
+  }
+
+  .l-hero__title .title-bg {
+    left: 0;
+    width: 100%;
+  }
+  .l-history__title .bg-yellow {
+    white-space: inherit;
   }
 }
 /* 1200px */
@@ -2014,17 +2156,13 @@ span.ripple-span {
   .l-history__title h2 {
     font-size: 40px;
   }
-
-  .l-history__title .l-profit__mobile-title::before {
-    height: 102px;
+  .l-history__title span {
+    font-size: 40px;
   }
 }
 /* 900px */
 
 @media screen and (max-width: 768px) {
-  .l-profit__mobile-title::before {
-    height: 100px;
-  }
   .l-hero__section {
     padding-top: 50px;
     padding-bottom: 170px;
@@ -2035,7 +2173,10 @@ span.ripple-span {
   }
   .c-title {
     font-size: 40px;
-    line-height: 50px;
+  }
+
+  .c-title span {
+    font-size: 40px;
   }
   .l-wrapper {
     padding: 0 20px;
@@ -2087,9 +2228,6 @@ span.ripple-span {
   .l-history__timeline {
     padding-left: 100px;
   }
-  .l-history__title .l-profit__mobile-title::before {
-    height: 51px;
-  }
 
   .l-category__link {
     padding-top: 50px;
@@ -2110,6 +2248,12 @@ span.ripple-span {
     right: 0;
     max-width: 50%;
     text-align: left;
+  }
+  .l-train__title .bg-yellow {
+    white-space: inherit;
+  }
+  .l-history__title {
+    padding-right: 0;
   }
 }
 
@@ -2151,10 +2295,9 @@ span.ripple-span {
   }
   .c-title {
     font-size: 28px;
-    line-height: 40px;
   }
-  .l-profit__mobile-title::before {
-    height: 72px;
+  .c-title span {
+    font-size: 28px;
   }
 
   .l-profit__list {
@@ -2228,9 +2371,6 @@ span.ripple-span {
   .l-history__title h2 {
     font-size: 28px;
   }
-  .l-history__title .l-profit__mobile-title::before {
-    height: 36px;
-  }
 
   .l-kids__content {
     background: unset;
@@ -2271,6 +2411,9 @@ span.ripple-span {
   }
   .l-phone__section {
     padding: 95px 0;
+  }
+  .l-kids__section {
+    padding: 50px 0 70px 0;
   }
 }
 
@@ -2326,7 +2469,9 @@ span.ripple-span {
   }
   .c-title {
     font-size: 25px;
-    line-height: 32px;
+  }
+  .c-title span {
+    font-size: 25px;
   }
   .l-hero__title h1 {
     font-size: 25px;
@@ -2524,6 +2669,14 @@ span.ripple-span {
   .l-footer__btn a {
     padding: 17px 20px;
   }
+
+  .l-profit__section {
+    background-position: 81% 100%;
+  }
+  .l-phone__bg {
+    width: 100%;
+    background-position: 50%;
+  }
 }
 /* 425px */
 
@@ -2549,7 +2702,9 @@ span.ripple-span {
   }
   .c-title {
     font-size: 20px;
-    line-height: 26px;
+  }
+  .c-title span {
+    font-size: 20px;
   }
   .l-profit__mobile-title::before {
     height: 49px;

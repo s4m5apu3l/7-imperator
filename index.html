@@ -12,23 +12,60 @@
   <link rel="stylesheet" href="./assets/css/modal-video.min.css">
   <link rel="stylesheet" href="./assets/css/icons.css">
   <link rel="stylesheet" href="./assets/css/fancybox.min.css">
+  <link rel="stylesheet" href="./assets/css/hystmodal.min.css">
   <link rel="stylesheet" href="style.css">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   <script src="./assets/js/scrollSmoother.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="./assets/js/modal-video.min.js"></script>
-  <script src="./assets/js/fancybox.min.js"></script>
+  <script src="./assets/js/modal-video.min.js" defer></script>
+  <script src="./assets/js/fancybox.min.js" defer></script>
+  <script src="./assets/js/hystmodal.min.js" defer></script>
   <script src="./assets/js/index.js" defer></script>
 
-  <script>!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "1090682", hash: "2cbbd3d93631aa8bb739b190d32c6091", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");</script>
-  <script id="amoforms_script_1090682" async="async" charset="utf-8"
-    src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1677663280"></script>
 </head>
 
 <body>
+  <!-- <header class="header">
+    <div class="l-wrapper">
+      <div class="l-header">
+        <div class="l-header__content">
+          <nav class="l-header__nav">
+            <ul>
+              <li>
+                <a href="https://imperatorclub.com/about.html">о клубе</a>
+              </li>
+              <li>
+                <a href="https://imperatorclub.com/#classes-items">единоборства</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="l-header__logo">
+            <a href="https://imperatorclub.com">
+              <img src="./assets/img/logo-min.png" alt="">
+            </a>
+          </div>
+          <nav class="l-header__nav">
+            <ul>
+              <li>
+                <a href="https://imperatorclub.com/trainers.html">
+                  тренеры
+                </a>
+              </li>
+              <li>
+                <a href="https://imperatorclub.com/contacts.html">
+                  контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header> -->
   <div class="smooth-wrapper">
     <main class="smooth-content">
       <section class="l-section l-hero__section ">
@@ -48,12 +85,12 @@
                       <span class="title-bg c-bg-gradient c-clip-path">франшиза школы</span>
                       единоборств
                       <br>
-                       для детей
+                      для детей
                     </span>
                   </h1>
                 </div>
                 <div class="l-hero__button ">
-                  <a href="#" class=" ripple-btn">
+                  <a href="#" class=" ripple-btn" data-hystmodal="#myModal">
                     <span class="c-gradient-text">
                       Стать партнером сети
                       «Седьмой император»
@@ -99,8 +136,11 @@
           <div class="l-profit">
             <div class="l-profit__title fadeUp ">
               <div class="l-profit__mobile-title">
-                <h2 class="c-title ">
-                  Почему выгодно открыть школу единоборств «Седьмой Император»
+                <h2 class="c-title">
+                  <span class="c-title__parent ">
+                    <span class="title-bg c-bg-gradient">Почему выгодно открыть школу</span>
+                    единоборств «Седьмой Император»
+                  </span>
                 </h2>
               </div>
               <h2 class="c-title">
@@ -180,10 +220,10 @@
               <div class="l-train__title fadeUp ">
                 <h2 class="c-title">
                   ТРЕНИРОВКИ
-                  <br>
-                  <span class="bg-yellow c-bg-gradient">В СЕДЬМОМ ИМПЕРАТОРЕ</span>
-                  <br>
-                  ДЛЯ РАЗНЫХ ВОЗРАСТОВ
+                  <span class="c-title__parent ">
+                    <span class="bg-yellow title-bg c-bg-gradient">В СЕДЬМОМ ИМПЕРАТОРЕ</span>
+                    ДЛЯ РАЗНЫХ ВОЗРАСТОВ
+                  </span>
                 </h2>
               </div>
               <!-- /.l-train__title -->
@@ -311,8 +351,12 @@
           <div class="l-history">
             <div class="l-history__title">
               <div class="l-profit__mobile-title">
-                <h2 class="c-title ">
-                  Стань частью истории Седьмого императора
+                <h2 class="c-title">
+                  ТРЕНИРОВКИ
+                  <span class="c-title__parent ">
+                    <span class="bg-yellow title-bg c-bg-gradient">Стань частью истории</span>
+                    Седьмого императора
+                  </span>
                 </h2>
               </div>
               <h3 class="c-title">
@@ -391,8 +435,12 @@
         <div class="l-kids__title">
           <div class="l-wrapper">
             <div class="l-profit__mobile-title">
-              <h2 class="c-title ">
-                Седьмой император – франшиза №1 в сфере единоборств для детей
+              <h2 class="c-title">
+                <span class="c-title__parent ">
+                  Седьмой император
+                  <span class="bg-yellow title-bg c-bg-gradient">– франшиза №1 в сфере единоборств</span>
+                  для детей
+                </span>
               </h2>
             </div>
             <h3 class="c-title fadeUp">
@@ -408,28 +456,28 @@
           <div class="l-kids__swiper js-swiper__content">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a href="./assets/img/swiper/kid-swiper (1).png" data-fancybox="gallery">
-                  <img src="./assets/img/swiper/kid-swiper (1).png" alt="">
+                <a href="./assets/img/swiper/kid-swiper1.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/kid-swiper1.png" alt="">
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="./assets/img/swiper/kid-swiper (2).png" data-fancybox="gallery">
-                  <img src="./assets/img/swiper/kid-swiper (2).png" alt="">
+                <a href="./assets/img/swiper/kid-swiper2.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/kid-swiper2.png" alt="">
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="./assets/img/swiper/kid-swiper (3).png" data-fancybox="gallery">
-                  <img src="./assets/img/swiper/kid-swiper (3).png" alt="">
+                <a href="./assets/img/swiper/kid-swiper3.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/kid-swiper3.png" alt="">
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="./assets/img/swiper/kid-swiper (4).png" data-fancybox="gallery">
-                  <img src="./assets/img/swiper/kid-swiper (4).png" alt="">
+                <a href="./assets/img/swiper/kid-swiper4.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/kid-swiper4.png" alt="">
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="./assets/img/swiper/kid-swiper (5).png" data-fancybox="gallery">
-                  <img src="./assets/img/swiper/kid-swiper (5).png" alt="">
+                <a href="./assets/img/swiper/kid-swiper5.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/kid-swiper5.png" alt="">
                 </a>
               </div>
             </div>
@@ -526,13 +574,19 @@
         <div class="l-wrapper">
           <div class="l-category">
             <div class="l-category__title fadeUp">
-              <h3 class="c-title">
+              <h2 class="c-title">
+                <span class="c-title__parent ">
+                  <span class="bg-yellow title-bg c-bg-gradient">Категории помещений для работы</span>
+                  ШЕ «Седьмой император»
+                </span>
+              </h2>
+              <!-- <h3 class="c-title">
                 <span class="bg-yellow c-bg-gradient">
                   Категории помещений для работы
                 </span>
                 <br>
                 ШЕ «Седьмой император»
-              </h3>
+              </h3> -->
             </div>
             <!-- /.l-category__title -->
             <div class="l-category__content">
@@ -573,7 +627,7 @@
                 </ul>
               </div>
               <div class="l-category__link">
-                <a href="javascript:void(0)" class="ripple-btn"> ПОЛУЧИТЬ
+                <a href="javascript:void(0)" class="ripple-btn" data-hystmodal="#myModal"> ПОЛУЧИТЬ
                   ФИНАНСОВУЮ МОДЕЛЬ</a>
               </div>
               <!-- /.l-category__link -->
@@ -595,19 +649,29 @@
           <div class="l-gallery__swiper js-swiper__content">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="./assets/img/swiper/gallery-1.png" alt="">
+                <a href="./assets/img/swiper/gallery-1.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/gallery-1.png" alt="">
+                </a>
               </div>
               <div class="swiper-slide">
-                <img src="./assets/img/swiper/gallery-2.png" alt="">
+                <a href="./assets/img/swiper/gallery-2.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/gallery-2.png" alt="">
+                </a>
               </div>
               <div class="swiper-slide">
-                <img src="./assets/img/swiper/gallery-3.png" alt="">
+                <a href="./assets/img/swiper/gallery-3.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/gallery-3.png" alt="">
+                </a>
               </div>
               <div class="swiper-slide">
-                <img src="./assets/img/swiper/gallery-4.png" alt="">
+                <a href="./assets/img/swiper/gallery-4.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/gallery-4.png" alt="">
+                </a>
               </div>
               <div class="swiper-slide">
-                <img src="./assets/img/swiper/gallery-5.png" alt="">
+                <a href="./assets/img/swiper/gallery-5.png" data-fancybox="gallery">
+                  <img src="./assets/img/swiper/gallery-5.png" alt="">
+                </a>
               </div>
             </div>
           </div>
@@ -751,7 +815,7 @@
 
                     <div class="l-calc__item-text">Оставьте заявку, чтобы
                       выяснить точную выручку и чистую прибыль</div>
-                    <button class="l-calc__button">Оставьте заявку</button>
+                    <a href="javascript:void(0)" class="l-calc__button" data-hystmodal="#myModal">Оставьте заявку</a>
                   </form>
                 </div>
               </div>
@@ -868,7 +932,7 @@
                       <img src="./assets/img/inst2.png" alt="">
                     </div>
                     <div class="swiper-slide">
-                      <img src="./assets/img/inst2.png" alt="">
+                      <img src="./assets/img/inst3.jpg" alt="">
                     </div>
                   </div>
                 </div>
@@ -912,7 +976,7 @@
               </div>
               <!-- /.l-footer__text -->
               <div class="l-footer__btn fadeUp">
-                <a href="#">
+                <a href="javascript:void(0)" data-hystmodal="#myModal">
                   Стать партнером сети
                   «Седьмой император»
                 </a>
@@ -927,7 +991,17 @@
       <!-- /.l-section l-footer__section -->
     </main>
   </div>
+  <div class="hystmodal" id="myModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button data-hystclose class="hystmodal__close">Закрыть</button>
 
+        <script>!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "1090682", hash: "2cbbd3d93631aa8bb739b190d32c6091", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");</script>
+        <script id="amoforms_script_1090682" async="async" charset="utf-8"
+          src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1677663280"></script>
+      </div>
+    </div>
+  </div>
 
 </body>
 
