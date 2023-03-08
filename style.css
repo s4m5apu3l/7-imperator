@@ -1053,6 +1053,11 @@ main {
 }
 .l-info__img {
   max-width: 479px;
+  max-height: 613px;
+  height: 100%;
+}
+.l-info__img img {
+  object-fit: contain;
 }
 
 .l-category__items ul {
@@ -1399,8 +1404,7 @@ main {
   cursor: pointer;
   overflow: visible;
   position: relative;
-  z-index: 10000;
-  /* box-shadow: -340px 0 0 320px ; */
+  z-index: 50;
 
   -webkit-appearance: none;
   margin-top: -10px;
