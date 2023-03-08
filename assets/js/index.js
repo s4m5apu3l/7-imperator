@@ -302,6 +302,7 @@ function createRipple(e) {
 const myModal = new HystModal({
   linkAttributeName: "data-hystmodal",
   // настройки (не обязательно), см. API
+  backscroll: false,
 });
 
 

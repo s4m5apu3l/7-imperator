@@ -364,7 +364,7 @@ main {
 
 .l-hero__section {
   height: 914px;
-  padding-top: 85px;
+  padding-top: 155px;
   position: relative;
 }
 .l-hero__section .l-wrapper {
@@ -787,7 +787,8 @@ main {
 .l-whatis__section::before {
   content: "";
   position: absolute;
-  background: url(./assets/img/back-kids.png) no-repeat;
+  /* background: url(./assets/img/back-kids.png) no-repeat; */
+  background: url(./assets/img-webp/back-kids.webp) no-repeat;
   top: 0;
   right: 0;
   width: 58%;
@@ -1079,17 +1080,17 @@ main {
 }
 
 .l-category__items ul li:nth-child(1)::before {
-  background: url(./assets/img/category1.png) no-repeat;
+  background: url(./assets/img-webp/category1.webp) no-repeat;
   background-size: cover;
   background-position-x: 50%;
 }
 .l-category__items ul li:nth-child(2)::before {
-  background: url(./assets/img/category2.png) no-repeat;
+  background: url(./assets/img-webp/category3.webp) no-repeat;
   background-size: cover;
   background-position-x: 50%;
 }
 .l-category__items ul li:nth-child(3)::before {
-  background: url(./assets/img/category3.png) no-repeat;
+  background: url(./assets/img-webp/category2.webp) no-repeat;
   background-size: cover;
   background-position-x: 50%;
 }
@@ -1297,6 +1298,7 @@ main {
   text-align: center;
   text-transform: uppercase;
   color: #343434;
+  white-space: pre-line;
 }
 
 .l-calc__calc {
@@ -1729,12 +1731,16 @@ main {
   position: relative;
   overflow: hidden;
   margin-top: -50px;
+    height: 819px;
 }
+
+.l-footer__section .l-wrapper {
+  height: 100%;
+}
+
 .l-footer__bg {
   /* background: url(./assets/img/footer-bg.png) no-repeat; */
   position: absolute;
-  /* background-size: 100% 100%; */
-  /* background-position: center; */
   top: 0;
   left: 0;
   width: 100%;
@@ -1748,7 +1754,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100%;
 }
 .l-footer__content {
   display: flex;
@@ -2519,6 +2526,9 @@ span.ripple-span {
   .l-kids__section {
     padding: 50px 0 70px 0;
   }
+  .l-footer__section {
+    height: 700px;
+  }
 }
 
 /* 560px */
@@ -2724,6 +2734,7 @@ span.ripple-span {
   }
   .l-calc__text-bold span {
     font-size: 14px;
+    white-space: inherit;
   }
   .l-calc__calc {
     padding: 60px 20px;
@@ -2781,6 +2792,10 @@ span.ripple-span {
     width: 100%;
     background-position: 50%;
   }
+  
+  .l-footer__btn a {
+    font-size: 14px;
+  }
 }
 /* 425px */
 
@@ -2830,5 +2845,8 @@ span.ripple-span {
   }
   .l-calc__list ul {
     grid-template-columns: 1fr 1fr;
+  }
+  .l-phone__bg {
+    background-size: inherit;
   }
 }
