@@ -354,10 +354,6 @@ main {
 
 /* l-hero-section start */
 
-.smooth-content {
-  padding-top: 40px;
-}
-
 .l-hero__title .title-bg {
   position: relative;
   width: 104%;
@@ -2376,9 +2372,6 @@ span.ripple-span {
   .l-history__title {
     padding-right: 0;
   }
-  .smooth-content {
-    padding-top: 20px;
-  }
 }
 
 /* 768px */
@@ -2809,9 +2802,6 @@ span.ripple-span {
   .l-footer__btn a {
     font-size: 14px;
   }
-  .smooth-content {
-    padding-top: 0;
-  } 
 }
 /* 425px */
 
