@@ -264,7 +264,7 @@ main {
 
 .l-header__mobile-navbar {
   transform: translateX(-200%);
-  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all .5s linear;
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   width: 100%;
@@ -354,6 +354,10 @@ main {
 
 /* l-hero-section start */
 
+.smooth-content {
+  padding-top: 40px;
+}
+
 .l-hero__title .title-bg {
   position: relative;
   width: 104%;
@@ -364,7 +368,7 @@ main {
 
 .l-hero__section {
   height: 914px;
-  padding-top: 155px;
+  padding-top: 80px;
   position: relative;
 }
 .l-hero__section .l-wrapper {
@@ -603,7 +607,7 @@ main {
   align-self: flex-end;
   font-weight: 400;
   font-size: 40px;
-  line-height: 52px;
+  line-height: 130%;
   text-align: right;
   text-transform: uppercase;
   color: #343434;
@@ -2366,6 +2370,9 @@ span.ripple-span {
   .l-history__title {
     padding-right: 0;
   }
+  .smooth-content {
+    padding-top: 20px;
+  }
 }
 
 /* 768px */
@@ -2796,6 +2803,9 @@ span.ripple-span {
   .l-footer__btn a {
     font-size: 14px;
   }
+  .smooth-content {
+    padding-top: 0;
+  } 
 }
 /* 425px */
 
