@@ -32,10 +32,31 @@
   <script src="./assets/js/hystmodal.min.js" defer></script>
   <script src="./assets/js/index.min.js?version=1.0.0" defer></script>
 
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i]function() { (m[i].a = m[i].a[]).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(92757724, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/92757724" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
- 
+
   <div class="smooth-wrapper">
     <main class="smooth-content">
       <section class="l-section l-hero__section ">
@@ -765,16 +786,14 @@
                         <div class="l-range__input">
                           <span id="price-value" class="bullet-number">3200</span>
                           <input id="price" class="l-range__line" type="range" value="3200" min="3200" max="7000"
-                            step="200"
-                            oninput="sliderPrice()">
+                            step="200" oninput="sliderPrice()">
                         </div>
                       </li>
                       <li>
                         <span class="l-calc__item-text">Количество детей в школе</span>
                         <div class="l-range__input">
                           <span id="days-value" class="bullet-number">60</span>
-                          <input id="days" class="l-range__line" type="range" value="60" min="60" max="220"
-                            step="10"
+                          <input id="days" class="l-range__line" type="range" value="60" min="60" max="220" step="10"
                             oninput="sliderDays()">
                         </div>
                       </li>
@@ -911,15 +930,15 @@
                 </div>
                 <div class=" swiper-pagination">
 
-                    </div>
-                  </div>
-                  <!-- /.l-phone__right -->
                 </div>
-                <!-- /.l-phone__contet -->
               </div>
-              <!-- /.l-phone -->
+              <!-- /.l-phone__right -->
             </div>
-            <!-- /.l-wrapper -->
+            <!-- /.l-phone__contet -->
+          </div>
+          <!-- /.l-phone -->
+        </div>
+        <!-- /.l-wrapper -->
       </section>
       <!-- /.l-section l-phone__section -->
 
@@ -975,7 +994,9 @@
   </div>
 
   <script>!function (a, m, o, c, r, m) { a[o + c] = a[o + c] || { setMeta: function (p) { this.params = (this.params || []).concat([p]) } }, a[o + r] = a[o + r] || function (f) { a[o + r].f = (a[o + r].f || []).concat([f]) }, a[o + r]({ id: "1090682", hash: "2cbbd3d93631aa8bb739b190d32c6091", locale: "ru" }), a[o + m] = a[o + m] || function (f, k) { a[o + m].f = (a[o + m].f || []).concat([[f, k]]) } }(window, 0, "amo_forms_", "params", "load", "loaded");</script>
-  <script>(function(a,m,o,c,r,m){a[m]={id:"381803",hash:"0993bf1cd6b745f21a4f291e0d270c66a5cd7b60447cad6da4d57cbdfeb67380",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1678346737';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));</script>
+  <script>(function (a, m, o, c, r, m) { a[m] = { id: "381803", hash: "0993bf1cd6b745f21a4f291e0d270c66a5cd7b60447cad6da4d57cbdfeb67380", locale: "ru", inline: false, setMeta: function (p) { this.params = (this.params || []).concat([p]) } }; a[o] = a[o] || function () { (a[o].q = a[o].q || []).push(arguments) }; var d = a.document, s = d.createElement('script'); s.async = true; s.id = m + '_script'; s.src = 'https://gso.amocrm.ru/js/button.js?1678346737'; d.head && d.head.appendChild(s) }(window, 0, 'amoSocialButton', 0, 0, 'amo_social_button'));</script>
+
+
 </body>
 
 </html>
