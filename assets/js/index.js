@@ -1,13 +1,11 @@
-
 // gsap scroll
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 if (ScrollTrigger.isTouch !== 1) {
-
   let smoother = ScrollSmoother.create({
     wrapper: ".smooth-wrapper",
     content: ".smooth-content",
-    smooth: .8,
+    smooth: 0.8,
     effects: true,
     smoothTouch: 0.1,
   });
@@ -28,7 +26,6 @@ if (ScrollTrigger.isTouch !== 1) {
     }
   );
 
-
   gsap.fromTo(
     ".l-whatis__content-right",
     { x: 400, opacity: 0 },
@@ -47,13 +44,15 @@ if (ScrollTrigger.isTouch !== 1) {
   gsap.fromTo(
     ".l-profit__list-item",
     { opacity: 0, x: -200 },
-    { opacity: 1, x: 0,
-      duration: .6,
+    {
+      opacity: 1,
+      x: 0,
+      duration: 0.6,
       stagger: 0.3,
       scrollTrigger: {
         trigger: ".l-profit__list-item",
       },
-     }
+    }
   );
 
   gsap.fromTo(
@@ -84,10 +83,7 @@ if (ScrollTrigger.isTouch !== 1) {
           onEnter: () => {
             // gsap.to(item, { height: '100%' });
           },
-
         },
-
-        
       }
     );
   });
@@ -101,7 +97,7 @@ if (ScrollTrigger.isTouch !== 1) {
       {
         opacity: 1,
         y: 0,
-        duration: .4,
+        duration: 0.4,
         scrollTrigger: {
           trigger: item,
           start: "-660",
@@ -122,7 +118,7 @@ if (ScrollTrigger.isTouch !== 1) {
       {
         opacity: 1,
         x: 0,
-        duration: .4,
+        duration: 0.4,
         scrollTrigger: {
           trigger: item,
           start: "-500",
@@ -142,11 +138,11 @@ if (ScrollTrigger.isTouch !== 1) {
       {
         opacity: 1,
         x: 0,
-        duration: .4,
+        duration: 0.4,
         scrollTrigger: {
           trigger: item,
           start: "-500",
-          
+
           // end: "top",/
           // scrub: true,
         },
@@ -159,22 +155,20 @@ if (ScrollTrigger.isTouch !== 1) {
   fadeOpacity.forEach((item) => {
     gsap.fromTo(
       item,
-      { opacity: 0},
+      { opacity: 0 },
       {
         opacity: 1,
-        duration: .4,
+        duration: 0.4,
         scrollTrigger: {
           trigger: item,
           // start: "500",
-          
+
           // end: "top",/
           // scrub: true,
         },
       }
     );
   });
-  
-  
 }
 
 // $(".js-modal-btn").modalVideo();
@@ -197,11 +191,11 @@ var swiperGallery = new Swiper(".l-gallery__swiper", {
   lazyLoading: true,
 });
 
-const textInstagram = document.querySelector('.l-phone__text .last');
+const textInstagram = document.querySelector(".l-phone__text .last");
 const slideText = [
-  {slide: 1, text: '@imperator_franchise'},
-  {slide: 2, text: '@imperator_ykt'},
-  {slide: 3, text: '@imperator.msk'},
+  { slide: 1, text: "@imperator_franchise" },
+  { slide: 2, text: "@imperator_ykt" },
+  { slide: 3, text: "@imperator.msk" },
 ];
 
 var swiperGallery = new Swiper(".l-phone__swiper", {
@@ -221,14 +215,13 @@ var swiperGallery = new Swiper(".l-phone__swiper", {
   },
 
   on: {
-    slideChange: function() {
+    slideChange: function () {
       const activeSlide = swiperGallery.realIndex + 1;
-      const slideValue = slideText.find(slide => slide.slide === activeSlide);
+      const slideValue = slideText.find((slide) => slide.slide === activeSlide);
       textInstagram.textContent = slideValue.text;
     },
   },
 });
-
 
 // calc range slider
 const rangePrice = document.querySelector("#price");
@@ -278,31 +271,42 @@ function sliderDays() {
 sliderDays();
 sliderPrice();
 
-let btns = document.querySelectorAll('.ripple-btn');
+let btns = document.querySelectorAll(".ripple-btn");
 btns.forEach((btn) => {
-    btn.addEventListener('click', createRipple);
-})
+  btn.addEventListener("click", createRipple);
+});
 
 function createRipple(e) {
-    let btn = e.target;
-    let boundingBox = btn.getBoundingClientRect();
-    let x = e.clientX - boundingBox.left;
-    let y = e.clientY - boundingBox.top;
+  let btn = e.target;
+  let boundingBox = btn.getBoundingClientRect();
+  let x = e.clientX - boundingBox.left;
+  let y = e.clientY - boundingBox.top;
 
-    let ripple = document.createElement('span');
-    ripple.classList.add('ripple-span');
-    ripple.style.left = `${x}px`;
-    ripple.style.top = `${y}px`;
+  let ripple = document.createElement("span");
+  ripple.classList.add("ripple-span");
+  ripple.style.left = `${x}px`;
+  ripple.style.top = `${y}px`;
 
-    btn.appendChild(ripple);
+  btn.appendChild(ripple);
 
-    ripple.addEventListener('animationend', () => { ripple.remove() });
+  ripple.addEventListener("animationend", () => {
+    ripple.remove();
+  });
 }
 
 const myModal = new HystModal({
   linkAttributeName: "data-hystmodal",
   // настройки (не обязательно), см. API
   backscroll: false,
+  beforeOpen: function () {
+    ym(92757724, "reachGoal", "klik_po_knopke");
+  },
 });
 
+const form = document.querySelectorAll(".form");
 
+form.forEach((el) => {
+  el.addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
+});
