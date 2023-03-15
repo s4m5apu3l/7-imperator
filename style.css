@@ -405,6 +405,7 @@ main {
   font-size: 14px;
   line-height: 130%;
   color: #343434;
+  position: relative;
 }
 
 .l-mob-hero__btn .l-hero__button a {
@@ -421,17 +422,18 @@ main {
 }
 
 .l-mob-hero__kid img {
-  width: 214px;
+  width: 190px;
   /* height: 283px; */
   position: absolute;
   left: -20px;
+  bottom: -70px;
 }
 
 .l-mob-hero__kid .l-hero__list ul {
   grid-template-columns: 1fr;
 }
 .l-mob-hero__kid .l-hero__list {
-  padding-left: 54%;
+  padding-left: 50%;
 }
 
 .l-hero__title .title-bg {
@@ -2661,6 +2663,7 @@ span.ripple-span {
 
   .l-hero__list li::after {
     width: 3px;
+    height: 100%;
   }
 }
 
@@ -2669,6 +2672,7 @@ span.ripple-span {
 @media screen and (max-width: 425px) {
   .l-mob-hero__kid img {
     height: 283px;
+    object-fit: contain;
   }
   .l-category__items .l-text,
   .l-category__items .l-white {
@@ -2716,6 +2720,9 @@ span.ripple-span {
   }
   .l-hero__list ul {
     gap: 10px;
+  }
+  .l-mob-hero__kid .l-hero__list ul {
+    gap: 23px;
   }
   .l-hero__section::before {
     background-position: 15% 100%;
@@ -2896,6 +2903,12 @@ span.ripple-span {
   .l-footer__btn a {
     font-size: 14px;
   }
+  .l-mob-hero__title .c-title .title-bg {
+    font-size: 25px !important;
+  }
+  .l-mob-hero__title .c-title .c-title__parent {
+    font-size: 20px !important;
+  }
 }
 /* 425px */
 
@@ -2955,5 +2968,8 @@ span.ripple-span {
     right: -16px;
     top: 6px;
     background-size: 100%;
+  }
+  .l-mob-hero__kid .l-hero__list ul {
+    gap: 10px;
   }
 }
