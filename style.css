@@ -2639,6 +2639,11 @@ span.ripple-span {
   .l-footer__section {
     height: 700px;
   }
+
+  .l-whatis__content-right img {
+    width: 100%;
+    height: 345px;
+  }
 }
 
 /* 560px */
