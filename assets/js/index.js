@@ -232,7 +232,7 @@ const rangeDaysValue = document.querySelector("#days-value");
 const result = document.querySelector("#result-calc");
 
 function sliderPrice() {
-  let rangeMax = 41000;
+  let rangeMax = 81000;
   let rangeMin = 18000;
   valPercent = Math.round(
     ((rangePrice.value - rangeMin) / (rangeMax - rangeMin)) * 100
