@@ -427,7 +427,6 @@ main {
   display: block;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 .l-mob-hero__kid img {
@@ -1061,11 +1060,9 @@ main {
   transform: scale(1.1);
 }
 
-
 .l-whatis__content-right img {
   width: 400px;
 }
-
 
 .l-kids__video a .l-kids__video-bg::before {
   content: "";
@@ -1504,6 +1501,20 @@ main {
   -webkit-appearance: none;
   margin-top: -10px;
   transition: box-shadow 0.2s ease-in-out;
+}
+
+.main-tg-kurs {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  /* or 18px */
+
+  text-align: center;
+
+  /* text */
+
+  color: #343434;
 }
 
 #price::before {
