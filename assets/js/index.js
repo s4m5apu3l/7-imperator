@@ -232,8 +232,8 @@ const rangeDaysValue = document.querySelector("#days-value");
 const result = document.querySelector("#result-calc");
 
 function sliderPrice() {
-  let rangeMax = 7000;
-  let rangeMin = 3200;
+  let rangeMax = 41000;
+  let rangeMin = 18000;
   valPercent = Math.round(
     ((rangePrice.value - rangeMin) / (rangeMax - rangeMin)) * 100
   );
@@ -244,10 +244,10 @@ function sliderPrice() {
   const formatResult = resultCalc
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  result.textContent = `${formatResult} руб`;
+  result.textContent = `${formatResult} тг`;
 
-  let bulletPosition = (rangePrice.value - 3300) / (rangeMax - rangeMin);
-  rangePriceValue.style.left = bulletPosition * 95 + "%";
+  let bulletPosition = (rangePrice.value - 18000) / (rangeMax - rangeMin);
+  rangePriceValue.style.left = bulletPosition * 90 + "%";
 }
 
 function sliderDays() {
@@ -263,7 +263,7 @@ function sliderDays() {
   const formatResult = resultCalc
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  result.textContent = `${formatResult} руб`;
+  result.textContent = `${formatResult} тг`;
 
   let bulletPosition = (rangeDays.value - 60) / (rangeMax - rangeMin);
   rangeDaysValue.style.left = bulletPosition * 95 + "%";
