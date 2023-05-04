@@ -183,6 +183,17 @@ var swiperKids = new Swiper(".l-kids__swiper", {
   lazyLoading: true,
 });
 
+let swiperFaces = new Swiper(".l-faces__swiper", {
+  slidesPerView: 1,
+  speed: 600,
+  lazyLoading: true,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
+
 var swiperGallery = new Swiper(".l-gallery__swiper", {
   slidesPerView: "auto",
   speed: 400,
