@@ -189,8 +189,12 @@ let swiperFaces = new Swiper(".l-faces__swiper", {
   lazyLoading: true,
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 7000,
     disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".boss-button-next",
+    prevEl: ".boss-button-prev",
   },
 });
 
