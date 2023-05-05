@@ -50,6 +50,11 @@ main {
   padding: 0 149px;
   margin: 0 auto;
 }
+
+.l-faces__swiper {
+  overflow: hidden;
+}
+
 /* components start */
 .c-clip-path {
   clip-path: polygon(0 1%, 100% 0%, 97% 100%, 0% 100%);
@@ -427,7 +432,6 @@ main {
   display: block;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 .l-mob-hero__kid img {
@@ -1061,6 +1065,10 @@ main {
   transform: scale(1.1);
 }
 
+.l-whatis__content-right img {
+  width: 400px;
+}
+
 .l-kids__video a .l-kids__video-bg::before {
   content: "";
   position: absolute;
@@ -1500,9 +1508,23 @@ main {
   transition: box-shadow 0.2s ease-in-out;
 }
 
+.main-tg-kurs {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  /* or 18px */
+
+  text-align: center;
+
+  /* text */
+
+  color: #343434;
+}
+
 #price::before {
   font-family: "Ruberoid-c";
-  content: "3200";
+  content: "18000";
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -1514,7 +1536,7 @@ main {
 }
 #price::after {
   font-family: "Ruberoid-c";
-  content: "14000";
+  content: "81000";
   position: absolute;
   right: 0;
   font-weight: 400;
@@ -1647,9 +1669,12 @@ main {
   width: 100%;
 }
 
+
 .l-faces__text .l-border {
   position: relative;
   padding: 40px;
+  height: 100%;
+  max-height: 568px;
   /* border: 2px solid #ffad00; */
 }
 .l-faces__text .l-border p {
@@ -1659,6 +1684,7 @@ main {
   line-height: 130%;
   color: #343434;
   border: 2px solid #ffad00;
+  height: 100%;
 }
 .l-faces__text .l-border p .bold {
   font-weight: 700;
@@ -2081,6 +2107,10 @@ span.ripple-span {
   .l-kids__title .bg-yellow {
     white-space: inherit;
   }
+  .l-faces__text .l-border p {
+    padding: 60px 30px;
+    font-size: 16px;
+  }
 }
 /* 1350px */
 
@@ -2289,9 +2319,13 @@ span.ripple-span {
   .l-whatis__section {
     padding: 100px 0;
   }
+  .l-faces__text .l-border {
+    max-height: 100%;
+  }
   .l-faces__text .l-border p {
     padding: 20px 14px;
     font-size: 16px;
+
   }
   .l-faces__text .l-border::before,
   .l-faces__text .l-border::after {
@@ -2568,9 +2602,6 @@ span.ripple-span {
     margin-bottom: 0;
   }
 
-  .l-whatis__content-right img {
-    width: 300px;
-  }
   .l-whatis__left-text {
     font-size: 16px;
   }
@@ -2624,6 +2655,11 @@ span.ripple-span {
   }
   .l-footer__section {
     height: 700px;
+  }
+
+  .l-whatis__content-right img {
+    width: 100%;
+    height: 345px;
   }
 }
 
