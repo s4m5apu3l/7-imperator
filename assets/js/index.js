@@ -204,6 +204,9 @@ let swiperFaces = new Swiper(".l-faces__swiper", {
     nextEl: ".boss-button-next",
     prevEl: ".boss-button-prev",
   },
+  pagination: {
+    el: ".boss-pagination",
+  },
 });
 
 const textInstagram = document.querySelector(".l-phone__text .last");
