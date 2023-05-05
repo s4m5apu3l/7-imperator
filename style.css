@@ -51,6 +51,16 @@ main {
   margin: 0 auto;
 }
 
+.boss-pagination {
+  position: absolute;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  max-width: 80px;
+  margin: 0 auto;
+  /* margin-bottom: 30px; */
+  z-index: 1000;
+}
 
 .boss-button-next {
   z-index: 1000;
@@ -1656,7 +1666,7 @@ width: 50px;
 /* l-faces section start */
 
 .l-faces__section {
-  padding: 80px 0 30px 0;
+  padding: 80px 0 50px 0;
 }
 .l-faces__title {
   text-align: center;

@@ -196,6 +196,9 @@ let swiperFaces = new Swiper(".l-faces__swiper", {
     nextEl: ".boss-button-next",
     prevEl: ".boss-button-prev",
   },
+  pagination: {
+    el: ".boss-pagination",
+  },
 });
 
 var swiperGallery = new Swiper(".l-gallery__swiper", {
