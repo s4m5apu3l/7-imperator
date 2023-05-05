@@ -52,6 +52,7 @@ main {
 }
 
 .boss-button-next {
+  z-index: 1000;
   width: 50px;
   position: absolute;
   right: 0;
@@ -62,6 +63,7 @@ main {
 }
 
 .boss-button-prev {
+  z-index: 1000;
   transform: rotate(180deg);
   position: absolute;
   left: 0;
@@ -2554,6 +2556,10 @@ span.ripple-span {
 /* 670px */
 
 @media screen and (max-width: 560px) {
+  .boss-button-next,
+  .boss-button-prev {
+    display: none;
+  }
   .l-hero--img img {
     width: 100%;
   }
