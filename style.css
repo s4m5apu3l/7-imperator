@@ -1074,6 +1074,7 @@ width: 50px;
 .l-kids__video a {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
   background: transparent;
   border: unset;
@@ -1105,7 +1106,7 @@ width: 50px;
 }
 
 .l-kids__video a:last-child .l-kids__video-bg {
-  background-image: url(./assets/img/video3.png);
+  background-image: url(./assets/img/video3.jpg);
   background-position: bottom;
 }
 
