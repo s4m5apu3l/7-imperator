@@ -1100,8 +1100,13 @@ width: 50px;
   background-image: url(./assets/img/video1.jpg);
 }
 
-.l-kids__video a:last-child .l-kids__video-bg {
+.l-kids__video a:nth-child(2) .l-kids__video-bg {
   background-image: url(./assets/img/video2.jpg);
+}
+
+.l-kids__video a:last-child .l-kids__video-bg {
+  background-image: url(./assets/img/video3.png);
+  background-position: bottom;
 }
 
 .l-kids__video a .l-kids__video-bg:hover svg {
@@ -2136,7 +2141,10 @@ span.ripple-span {
     display: block;
     position: relative;
   }
-
+  .l-kids__video {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .l-kids__video a {
     flex-direction: column;
   }
