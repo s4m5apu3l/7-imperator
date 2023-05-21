@@ -1073,6 +1073,7 @@ width: 50px;
 .l-kids__video a {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
   background: transparent;
   border: unset;
